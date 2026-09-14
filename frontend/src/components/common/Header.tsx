@@ -72,8 +72,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const TABS: { id: MainTab; label: string; icon: React.ReactNode }[] = [
     { id: 'overview', label: 'Overview', icon: <LayoutDashboard className="w-3.5 h-3.5" /> },
-    { id: 'customers', label: 'Customer 360', icon: <Users className="w-3.5 h-3.5" /> },
-    { id: 'all-customers', label: 'View All Customers', icon: <Users className="w-3.5 h-3.5 text-brandPrimary" /> },
+    { id: 'customers', label: 'Customer 360', icon: <Users className="w-3.5 h-3.5 text-brandPrimary" /> },
     { id: 'datalab', label: 'Live Data Lab', icon: <Database className="w-3.5 h-3.5" /> },
     { id: 'segments', label: 'Segments', icon: <Layers className="w-3.5 h-3.5" /> },
     { id: 'actions', label: 'Actions', icon: <Send className="w-3.5 h-3.5" /> },

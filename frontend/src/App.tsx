@@ -42,7 +42,7 @@ export function AppContent() {
     dashboard: 'overview',
     executive: 'settings',
     customer360: 'customers',
-    allcustomers: 'all-customers',
+    allcustomers: 'customers',
     datalab: 'datalab',
     dispatch: 'actions',
     sandbox: 'segments',
@@ -52,8 +52,8 @@ export function AppContent() {
   const mainTabToFeature: Record<string, FeatureGroup> = {
     overview: 'dashboard',
     customers: 'customer360',
-    'all-customers': 'allcustomers',
-    allcustomers: 'allcustomers',
+    'all-customers': 'customer360',
+    allcustomers: 'customer360',
     datalab: 'datalab',
     segments: 'sandbox',
     actions: 'dispatch',
@@ -89,16 +89,9 @@ export function AppContent() {
           />
         );
       case 'customer360':
-        return (
-          <Customer360Page
-            selectedCustomer={selectedCustomer}
-            onSelectCustomer={setSelectedCustomer}
-            onNavigateTab={handleSelectTab}
-          />
-        );
       case 'allcustomers':
         return (
-          <ViewAllCustomersPage
+          <Customer360Page
             selectedCustomer={selectedCustomer}
             onSelectCustomer={setSelectedCustomer}
             onNavigateTab={handleSelectTab}

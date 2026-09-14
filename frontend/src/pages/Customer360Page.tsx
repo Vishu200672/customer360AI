@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {
   Users,
   Search,
@@ -18,16 +18,21 @@ import {
   Zap,
   Clock,
   ChevronRight,
+  ChevronLeft,
   Phone,
   Calendar,
   ShoppingBag,
   Target,
   Eye,
+  UserPlus,
+  ArrowUpDown,
+  RefreshCw,
 } from 'lucide-react';
 import { api } from '../services/api';
 import { Customer360Read, CustomerProfile } from '../types/api';
 import { Badge } from '../components/common/Badge';
 import { Breadcrumb } from '../components/common/Breadcrumb';
+import { AddCustomerModal } from '../components/modals/AddCustomerModal';
 
 export type Customer360SubFeature = 'directory' | 'dossier' | 'trajectory' | 'cohorts';
 
@@ -39,7 +44,7 @@ interface Customer360PageProps {
 }
 
 const SUB_FEATURE_LABELS: Record<Customer360SubFeature, string> = {
-  directory: '2.1 Unified Customer Directory',
+  directory: '2.1 Unified Directory & All Customers',
   dossier: '2.2 Deep-Dive Customer Dossier',
   trajectory: '2.3 Risk & CLV Trajectory (30/60/90d)',
   cohorts: '2.4 Lookalike & Cohorts Discovery',
@@ -57,28 +62,112 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
   const [loading, setLoading] = useState<boolean>(true);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [statusFilter, setStatusFilter] = useState<string>('ALL');
-  const [showAllDirectory, setShowAllDirectory] = useState<boolean>(false);
+  
+  // Advanced Table Controls from View All Customers
+  const [sortBy, setSortBy] = useState<'recency' | 'name' | 'status' | 'channel'>('recency');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pageSize, setPageSize] = useState<number>(10);
+  const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
 
   const customerId = selectedCustomer?.id || 'c101';
 
-  useEffect(() => {
+  const loadCustomers = useCallback(async () => {
     setLoading(true);
-    api.getCustomers(searchTerm, statusFilter).then((custs) => {
-      const sorted = [...custs].sort((a, b) => {
-        const timeA = a.created_at ? new Date(a.created_at).getTime() : 0;
-        const timeB = b.created_at ? new Date(b.created_at).getTime() : 0;
-        return timeB - timeA;
-      });
-      setCustomers(sorted);
-    });
-    if (customerId) {
-      api.getCustomer360(customerId).then(setC360Data).finally(() => setLoading(false));
+    try {
+      const data = await api.getCustomers();
+      setCustomers(data);
+    } catch (err) {
+      console.error('Failed to load customers:', err);
+    } finally {
+      setLoading(false);
     }
-  }, [customerId, searchTerm, statusFilter]);
+  }, []);
+
+  useEffect(() => {
+    loadCustomers();
+  }, [loadCustomers]);
+
+  useEffect(() => {
+    if (customerId) {
+      api.getCustomer360(customerId).then(setC360Data).catch(() => {});
+    }
+  }, [customerId]);
+
+  // Reset pagination on search or filter change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, statusFilter, pageSize]);
 
   // Priority count badges
   const atRiskCount = customers.filter((c) => (c.customer_status || '').toLowerCase().includes('risk')).length;
   const activeVipCount = customers.filter((c) => (c.customer_status || '').toLowerCase().includes('vip') || (c.customer_status || '').toLowerCase().includes('active')).length;
+
+  // Search & Filter Logic
+  const filteredCustomers = customers.filter((c) => {
+    const firstName = c.first_name || '';
+    const lastName = c.last_name || '';
+    const extId = c.external_customer_id || '';
+    const email = c.email || '';
+    const phone = c.phone || '';
+
+    const q = searchTerm.toLowerCase();
+    const matchesSearch =
+      !searchTerm ||
+      `${firstName} ${lastName}`.toLowerCase().includes(q) ||
+      extId.toLowerCase().includes(q) ||
+      email.toLowerCase().includes(q) ||
+      phone.toLowerCase().includes(q);
+
+    const statusLower = (c.customer_status || '').toLowerCase();
+    const matchesStatus =
+      statusFilter === 'ALL' ||
+      (statusFilter === 'At-Risk' && (statusLower.includes('risk') || statusLower.includes('churn'))) ||
+      (statusFilter === 'VIP' && statusLower.includes('vip')) ||
+      (statusFilter === 'Dormant' && statusLower.includes('dormant')) ||
+      (statusFilter === 'Active' && statusLower.includes('active'));
+
+    return matchesSearch && matchesStatus;
+  });
+
+  // Sorting Logic
+  const sortedCustomers = [...filteredCustomers].sort((a, b) => {
+    let result = 0;
+    if (sortBy === 'recency') {
+      const timeA = a.created_at ? new Date(a.created_at).getTime() : 0;
+      const timeB = b.created_at ? new Date(b.created_at).getTime() : 0;
+      result = timeA - timeB;
+    } else if (sortBy === 'name') {
+      const nameA = `${a.first_name} ${a.last_name}`.toLowerCase();
+      const nameB = `${b.first_name} ${b.last_name}`.toLowerCase();
+      result = nameA.localeCompare(nameB);
+    } else if (sortBy === 'status') {
+      const statA = (a.customer_status || '').toLowerCase();
+      const statB = (b.customer_status || '').toLowerCase();
+      result = statA.localeCompare(statB);
+    } else if (sortBy === 'channel') {
+      const chanA = (a.acquisition_channel || '').toLowerCase();
+      const chanB = (b.acquisition_channel || '').toLowerCase();
+      result = chanA.localeCompare(chanB);
+    }
+    return sortOrder === 'desc' ? -result : result;
+  });
+
+  // Pagination calculation
+  const totalRecords = sortedCustomers.length;
+  const effectivePageSize = pageSize === 99999 ? Math.max(1, totalRecords) : pageSize;
+  const totalPages = Math.ceil(totalRecords / effectivePageSize);
+  const startIndex = (currentPage - 1) * effectivePageSize;
+  const paginatedCustomers = sortedCustomers.slice(startIndex, startIndex + effectivePageSize);
+
+  const handleSort = (key: 'recency' | 'name' | 'status' | 'channel') => {
+    if (sortBy === key) {
+      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortBy(key);
+      setSortOrder('desc');
+    }
+  };
 
   return (
     <div className="space-y-5">
@@ -131,7 +220,7 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
               : 'bg-bgCard text-textSecondary hover:text-textPrimary border border-borderSubtle'
           }`}
         >
-          2.1 Unified Directory ({customers.length})
+          2.1 Unified Directory & All Customers ({customers.length})
         </button>
         <button
           onClick={() => setSubFeature('dossier')}
@@ -165,7 +254,7 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
         </button>
       </div>
 
-      {/* Sub-Feature 2.1: Unified Customer Directory */}
+      {/* Sub-Feature 2.1: Unified Customer Directory & All Customers */}
       {subFeature === 'directory' && (
         <div className="space-y-4 animate-fade-up">
           {/* KPI Summary Cards */}
@@ -198,21 +287,21 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
             </div>
           </div>
 
-          {/* Search & Filter Toolbar */}
+          {/* Search, Filter & Action Toolbar */}
           <div className="bg-bgCard border border-borderSubtle rounded-2xl p-4 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3 w-full md:w-auto">
               <div className="relative w-full md:w-72">
                 <Search className="w-4 h-4 text-textSecondary absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
-                  placeholder="Search by name, email, ID..."
+                  placeholder="Search by name, email, phone, ID..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-borderSubtle bg-bgMain text-textPrimary focus:outline-none focus:border-accentPrimary font-medium"
                 />
               </div>
               <span className="text-[11px] font-extrabold px-2.5 py-1 rounded-full bg-brandPrimary/10 text-brandPrimary border border-brandPrimary/20 shrink-0">
-                {showAllDirectory ? `Showing All ${customers.length} Accounts` : `Top 10 Recent (${Math.min(10, customers.length)} of ${customers.length})`}
+                {totalRecords} Accounts Found
               </span>
             </div>
 
@@ -234,127 +323,188 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
                 ))}
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 shrink-0">
                 <button
-                  onClick={() => setShowAllDirectory(!showAllDirectory)}
-                  className="px-3 py-1.5 rounded-xl bg-bgMain border border-borderSubtle hover:bg-bgHover text-textPrimary text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shrink-0"
+                  onClick={loadCustomers}
+                  className="p-2 rounded-xl bg-bgMain border border-borderSubtle hover:bg-bgHover text-textSecondary hover:text-textPrimary transition"
+                  title="Refresh Customer Directory"
                 >
-                  <Eye className="w-3.5 h-3.5 text-textSecondary" />
-                  {showAllDirectory ? 'Top 10 Only' : 'Expand Inline'}
+                  <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
                 </button>
 
                 <button
-                  onClick={() => onNavigateTab('all-customers')}
-                  className="px-3.5 py-1.5 rounded-xl bg-brandPrimary hover:bg-brandHover text-textInverse text-xs font-extrabold transition flex items-center gap-1.5 shadow-xs shrink-0 cursor-pointer"
+                  onClick={() => setIsAddModalOpen(true)}
+                  className="px-3.5 py-1.5 rounded-xl bg-accentPrimary hover:bg-accentPrimary/90 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
                 >
-                  <Eye className="w-3.5 h-3.5" /> View All Page ({customers.length})
+                  <UserPlus className="w-4 h-4" /> Add Customer
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Directory Data Table */}
+          {/* Directory Data Table with Sorting */}
           <div className="bg-bgCard border border-borderSubtle rounded-2xl shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-borderSubtle bg-bgMain/50 text-textSecondary font-bold uppercase text-[10px]">
-                    <th className="py-3 px-4">Customer Identity</th>
+                    <th className="py-3 px-4 cursor-pointer hover:text-textPrimary transition" onClick={() => handleSort('name')}>
+                      <div className="flex items-center gap-1">
+                        Customer Identity <ArrowUpDown className="w-3 h-3" />
+                      </div>
+                    </th>
                     <th className="py-3 px-4">External ID</th>
-                    <th className="py-3 px-4">Acquisition Channel</th>
-                    <th className="py-3 px-4">Status</th>
+                    <th className="py-3 px-4 cursor-pointer hover:text-textPrimary transition" onClick={() => handleSort('channel')}>
+                      <div className="flex items-center gap-1">
+                        Acquisition Channel <ArrowUpDown className="w-3 h-3" />
+                      </div>
+                    </th>
+                    <th className="py-3 px-4 cursor-pointer hover:text-textPrimary transition" onClick={() => handleSort('status')}>
+                      <div className="flex items-center gap-1">
+                        Status <ArrowUpDown className="w-3 h-3" />
+                      </div>
+                    </th>
+                    <th className="py-3 px-4 cursor-pointer hover:text-textPrimary transition" onClick={() => handleSort('recency')}>
+                      <div className="flex items-center gap-1">
+                        Recency <ArrowUpDown className="w-3 h-3" />
+                      </div>
+                    </th>
                     <th className="py-3 px-4 text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-borderSubtle">
-                  {(showAllDirectory ? customers : customers.slice(0, 10)).map((c) => {
-                    const isSelected = selectedCustomer?.id === c.id;
-                    return (
-                      <tr
-                        key={c.id}
-                        onClick={() => {
-                          onSelectCustomer(c);
-                          setSubFeature('dossier');
-                        }}
-                        className={`hover:bg-bgHover transition cursor-pointer ${isSelected ? 'bg-indigo-500/10 font-medium' : ''}`}
-                      >
-                        <td className="py-3.5 px-4">
-                          <div className="flex items-center gap-3">
-                            <div className={`w-8 h-8 rounded-full font-bold flex items-center justify-center text-xs ${
-                              isSelected ? 'bg-indigo-600 text-white' : 'bg-accentPrimary/10 border border-accentPrimary/30 text-accentPrimary'
-                            }`}>
-                              {c.first_name[0]}{c.last_name[0]}
+                  {paginatedCustomers.length === 0 ? (
+                    <tr>
+                      <td colSpan={6} className="py-8 text-center text-textSecondary">
+                        No customer accounts match search or status filter.
+                      </td>
+                    </tr>
+                  ) : (
+                    paginatedCustomers.map((c) => {
+                      const isSelected = selectedCustomer?.id === c.id;
+                      return (
+                        <tr
+                          key={c.id}
+                          onClick={() => {
+                            onSelectCustomer(c);
+                            setSubFeature('dossier');
+                          }}
+                          className={`hover:bg-bgHover transition cursor-pointer ${isSelected ? 'bg-indigo-500/10 font-medium' : ''}`}
+                        >
+                          <td className="py-3.5 px-4">
+                            <div className="flex items-center gap-3">
+                              <div className={`w-8 h-8 rounded-full font-bold flex items-center justify-center text-xs ${
+                                isSelected ? 'bg-indigo-600 text-white' : 'bg-accentPrimary/10 border border-accentPrimary/30 text-accentPrimary'
+                              }`}>
+                                {c.first_name[0]}{c.last_name[0]}
+                              </div>
+                              <div>
+                                <div className="font-bold text-textPrimary">{c.first_name} {c.last_name}</div>
+                                <div className="text-[10px] text-textSecondary">{c.email} • {c.phone || 'Phone verified'}</div>
+                              </div>
                             </div>
-                            <div>
-                              <div className="font-bold text-textPrimary">{c.first_name} {c.last_name}</div>
-                              <div className="text-[10px] text-textSecondary">{c.email} • {c.phone || 'Phone verified'}</div>
+                          </td>
+                          <td className="py-3.5 px-4 font-mono text-textSecondary">{c.external_customer_id}</td>
+                          <td className="py-3.5 px-4 font-medium text-textPrimary">{c.acquisition_channel}</td>
+                          <td className="py-3.5 px-4">
+                            <Badge variant={(c.customer_status || '').toLowerCase().includes('risk') ? 'error' : 'success'}>
+                              {c.customer_status || 'Active'}
+                            </Badge>
+                          </td>
+                          <td className="py-3.5 px-4 text-textSecondary font-mono text-[11px]">
+                            {c.recency_days !== undefined ? `${c.recency_days}d ago` : 'Recent'}
+                          </td>
+                          <td className="py-3.5 px-4 text-right">
+                            <div className="flex items-center justify-end gap-2">
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  onSelectCustomer(c);
+                                  setSubFeature('dossier');
+                                }}
+                                className="px-3 py-1 rounded-xl bg-accentPrimary text-white text-xs font-bold hover:bg-accentPrimary/90 transition"
+                              >
+                                Inspect Dossier
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  onSelectCustomer(c);
+                                  onNavigateTab('actions');
+                                }}
+                                className="px-2.5 py-1 rounded-xl bg-bgMain border border-borderSubtle hover:border-accentPrimary text-textPrimary text-xs font-semibold transition"
+                              >
+                                Dispatch ⚡
+                              </button>
                             </div>
-                          </div>
-                        </td>
-                        <td className="py-3.5 px-4 font-mono text-textSecondary">{c.external_customer_id}</td>
-                        <td className="py-3.5 px-4 font-medium text-textPrimary">{c.acquisition_channel}</td>
-                        <td className="py-3.5 px-4">
-                          <Badge variant={(c.customer_status || '').toLowerCase().includes('risk') ? 'error' : 'success'}>
-                            {c.customer_status || 'Active'}
-                          </Badge>
-                        </td>
-                        <td className="py-3.5 px-4 text-right">
-                          <div className="flex items-center justify-end gap-2">
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                onSelectCustomer(c);
-                                setSubFeature('dossier');
-                              }}
-                              className="px-3 py-1 rounded-xl bg-accentPrimary text-white text-xs font-bold hover:bg-accentPrimary/90 transition"
-                            >
-                              Inspect Dossier
-                            </button>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                onSelectCustomer(c);
-                                onNavigateTab('actions');
-                              }}
-                              className="px-2.5 py-1 rounded-xl bg-bgMain border border-borderSubtle hover:border-accentPrimary text-textPrimary text-xs font-semibold transition"
-                            >
-                              Dispatch ⚡
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    );
-                  })}
+                          </td>
+                        </tr>
+                      );
+                    })
+                  )}
                 </tbody>
               </table>
             </div>
 
-            {/* Footer Pagination / Expansion Toolbar */}
+            {/* Pagination & Page Size Toolbar */}
             <div className="p-4 border-t border-borderSubtle bg-bgMain/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
               <div className="text-textSecondary text-[11px] font-medium flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Showing <strong className="text-textPrimary font-bold">{showAllDirectory ? customers.length : Math.min(10, customers.length)}</strong> of{' '}
-                <strong className="text-textPrimary font-bold">{customers.length}</strong> Connected Profiles (Sorted by Recency)
+                Showing <strong className="text-textPrimary font-bold">{totalRecords === 0 ? 0 : startIndex + 1}</strong> to{' '}
+                <strong className="text-textPrimary font-bold">{Math.min(startIndex + effectivePageSize, totalRecords)}</strong> of{' '}
+                <strong className="text-textPrimary font-bold">{totalRecords}</strong> Accounts
               </div>
 
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowAllDirectory(!showAllDirectory)}
-                  className="px-3.5 py-1.5 rounded-xl bg-bgMain border border-borderSubtle hover:bg-bgHover text-textPrimary text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-xs"
-                >
-                  <Eye className="w-3.5 h-3.5 text-textSecondary" />
-                  {showAllDirectory ? 'Top 10 Only' : 'Expand Inline'}
-                </button>
+              <div className="flex items-center gap-3">
+                {/* Page Size Selector */}
+                <div className="flex items-center gap-1.5 text-xs text-textSecondary">
+                  <span>Show:</span>
+                  <select
+                    value={pageSize}
+                    onChange={(e) => setPageSize(Number(e.target.value))}
+                    className="bg-bgMain border border-borderSubtle rounded-lg px-2 py-1 text-xs text-textPrimary font-bold focus:outline-none focus:border-accentPrimary"
+                  >
+                    <option value={10}>10 / page</option>
+                    <option value={25}>25 / page</option>
+                    <option value={50}>50 / page</option>
+                    <option value={100}>100 / page</option>
+                    <option value={99999}>Show All</option>
+                  </select>
+                </div>
 
-                <button
-                  onClick={() => onNavigateTab('all-customers')}
-                  className="px-4 py-2 rounded-xl bg-brandPrimary hover:bg-brandHover text-textInverse text-xs font-extrabold transition flex items-center gap-1.5 shadow-md cursor-pointer"
-                >
-                  <Eye className="w-3.5 h-3.5" /> View All Page ({customers.length}) →
-                </button>
+                {/* Pagination Controls */}
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="p-1.5 rounded-lg bg-bgMain border border-borderSubtle hover:bg-bgHover text-textPrimary disabled:opacity-40 disabled:cursor-not-allowed transition"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <span className="px-3 py-1 font-mono font-bold text-xs text-textPrimary">
+                    {currentPage} / {totalPages || 1}
+                  </span>
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={currentPage >= totalPages}
+                    className="p-1.5 rounded-lg bg-bgMain border border-borderSubtle hover:bg-bgHover text-textPrimary disabled:opacity-40 disabled:cursor-not-allowed transition"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Add Customer Modal */}
+          <AddCustomerModal
+            isOpen={isAddModalOpen}
+            onClose={() => setIsAddModalOpen(false)}
+            onCustomerAdded={(newCust) => {
+              onSelectCustomer(newCust);
+              loadCustomers();
+            }}
+          />
         </div>
       )}
 
