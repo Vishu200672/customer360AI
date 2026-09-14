@@ -54,6 +54,70 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
   const [botStatus, setBotStatus] = useState<ChatbotStatusResponse | null>(null);
   const [botName, setBotName] = useState<string>('Customer Intelligence');
 
+  // Draggable Floating Button Position State
+  const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [dragStartOffset, setDragStartOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [hasMoved, setHasMoved] = useState<boolean>(false);
+
+  useEffect(() => {
+    const initPos = () => {
+      if (!position) {
+        setPosition({
+          x: Math.max(16, window.innerWidth - 80),
+          y: Math.max(16, window.innerHeight - 80),
+        });
+      }
+    };
+    initPos();
+    window.addEventListener('resize', initPos);
+    return () => window.removeEventListener('resize', initPos);
+  }, [position]);
+
+  const handlePointerDown = (clientX: number, clientY: number) => {
+    setIsDragging(true);
+    setHasMoved(false);
+    const currX = position?.x ?? (window.innerWidth - 80);
+    const currY = position?.y ?? (window.innerHeight - 80);
+    setDragStartOffset({
+      x: clientX - currX,
+      y: clientY - currY,
+    });
+  };
+
+  useEffect(() => {
+    const handlePointerMove = (clientX: number, clientY: number) => {
+      if (!isDragging) return;
+      setHasMoved(true);
+      const newX = Math.min(Math.max(16, clientX - dragStartOffset.x), window.innerWidth - 72);
+      const newY = Math.min(Math.max(16, clientY - dragStartOffset.y), window.innerHeight - 72);
+      setPosition({ x: newX, y: newY });
+    };
+
+    const onMouseMove = (e: MouseEvent) => handlePointerMove(e.clientX, e.clientY);
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        handlePointerMove(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+    const onPointerUp = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onPointerUp);
+      window.addEventListener('touchmove', onTouchMove);
+      window.addEventListener('touchend', onPointerUp);
+    }
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onPointerUp);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('touchend', onPointerUp);
+    };
+  }, [isDragging, dragStartOffset]);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -88,7 +152,7 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
     if (isOpen) {
       messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [messages, isOpen, isLoading]);
+  }, [messages, isOpen]);
 
   // Focus input when opening panel
   useEffect(() => {
@@ -99,25 +163,25 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
     }
   }, [isOpen]);
 
-  const handleSendMessage = async (textToSend?: string) => {
-    const message = (textToSend || inputMessage).trim();
-    if (!message || isLoading) return;
+  const handleSendMessage = async (customPrompt?: string) => {
+    const textToSend = (customPrompt || inputMessage).trim();
+    if (!textToSend || isLoading) return;
 
     const userMessageItem: ChatMessageItem = {
-      id: `msg_user_${Date.now()}`,
+      id: `usr_${Date.now()}`,
       sender: 'user',
-      text: message,
+      text: textToSend,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
 
     setMessages((prev) => [...prev, userMessageItem]);
-    setInputMessage('');
-    setErrorMessage(null);
+    if (!customPrompt) setInputMessage('');
     setIsLoading(true);
+    setErrorMessage(null);
 
     try {
       const response: ChatResponse = await api.sendChatMessage(
-        message,
+        textToSend,
         selectedCustomer?.id,
         {
           customer_id: selectedCustomer?.id,
@@ -129,8 +193,8 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
         setBotName(response.bot_name);
       }
 
-      const assistantMessageItem: ChatMessageItem = {
-        id: `msg_asst_${Date.now()}`,
+      const botMessageItem: ChatMessageItem = {
+        id: `bot_${Date.now()}`,
         sender: 'assistant',
         text: response.answer || 'Analysis complete.',
         intent: response.intent,
@@ -144,15 +208,16 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
 
-      setMessages((prev) => [...prev, assistantMessageItem]);
+      setMessages((prev) => [...prev, botMessageItem]);
     } catch (err: any) {
+      console.error('Chatbot API error:', err);
       setErrorMessage(err.message || 'Unable to communicate with the intelligence service. Please check your session and try again.');
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleConfirmWhatsApp = async (preview: ChatMessagePreview) => {
+  const handleConfirmDispatch = async (preview: ChatMessagePreview) => {
     if (isLoading) return;
     setIsLoading(true);
     setErrorMessage(null);
@@ -217,9 +282,23 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
     <aside aria-label="Customer Intelligence Chatbot" className="select-none">
       {/* 1. Floating Launcher Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onMouseDown={(e) => {
+          if (e.button === 0) handlePointerDown(e.clientX, e.clientY);
+        }}
+        onTouchStart={(e) => {
+          if (e.touches.length > 0) handlePointerDown(e.touches[0].clientX, e.touches[0].clientY);
+        }}
+        onClick={() => {
+          if (!hasMoved) {
+            setIsOpen(!isOpen);
+          }
+        }}
+        style={position ? { left: `${position.x}px`, top: `${position.y}px` } : undefined}
         aria-label={isOpen ? 'Close Customer Intelligence Chatbot' : 'Open Customer Intelligence Chatbot'}
-        className={`fixed bottom-6 right-6 z-50 p-3.5 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center border ${
+        title="Click to open chatbot, Drag to move anywhere on screen"
+        className={`fixed z-50 p-3.5 rounded-full shadow-2xl transition-shadow duration-300 flex items-center justify-center border cursor-grab active:cursor-grabbing ${
+          !position ? 'bottom-6 right-6' : ''
+        } ${
           isOpen
             ? 'bg-slate-800 text-white border-slate-600 hover:bg-slate-700'
             : 'bg-brandPrimary text-white border-brandHover hover:bg-brandHover hover:scale-105 active:scale-95 shadow-brandPrimary/30'
@@ -242,7 +321,13 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
           role="dialog"
           aria-modal="true"
           aria-label="Customer Intelligence Assistant Panel"
-          className="fixed bottom-20 right-4 sm:right-6 z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[620px] max-h-[calc(100vh-6.5rem)] bg-bgCard text-textPrimary rounded-3xl shadow-2xl border border-slate-700/60 flex flex-col overflow-hidden backdrop-blur-xl animate-fade-up"
+          style={position ? {
+            left: position.x > window.innerWidth / 2 ? `${Math.max(16, position.x - 380)}px` : `${Math.min(window.innerWidth - 440, position.x)}px`,
+            top: position.y > window.innerHeight / 2 ? `${Math.max(16, position.y - 630)}px` : `${Math.min(window.innerHeight - 630, position.y + 60)}px`,
+          } : undefined}
+          className={`fixed z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[620px] max-h-[calc(100vh-6.5rem)] bg-bgCard text-textPrimary rounded-3xl shadow-2xl border border-slate-700/60 flex flex-col overflow-hidden backdrop-blur-xl animate-fade-up ${
+            !position ? 'bottom-20 right-4 sm:right-6' : ''
+          }`}
         >
           {/* Header */}
           <div className="px-4 py-3.5 bg-bgCanvas/90 border-b border-borderBorder/60 flex items-center justify-between shrink-0">
@@ -369,7 +454,7 @@ export const CustomerChatbot: React.FC<CustomerChatbotProps> = ({ selectedCustom
                       {/* Explicit Confirmation Action */}
                       <div className="flex items-center gap-2 pt-1">
                         <button
-                          onClick={() => msg.message_preview && handleConfirmWhatsApp(msg.message_preview)}
+                          onClick={() => msg.message_preview && handleConfirmDispatch(msg.message_preview)}
                           disabled={isLoading}
                           className="flex-1 py-1.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-[11px] transition-colors flex items-center justify-center gap-1 shadow-sm disabled:opacity-50"
                         >

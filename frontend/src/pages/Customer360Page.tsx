@@ -323,7 +323,45 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
                 ))}
               </div>
 
-              <div className="flex items-center gap-2 shrink-0">
+              {/* Shifted Page Controls Upward */}
+              <div className="flex items-center gap-2 shrink-0 border-l border-borderSubtle pl-2">
+                <div className="flex items-center gap-1 text-xs text-textSecondary">
+                  <span className="text-[11px] font-medium">Show:</span>
+                  <select
+                    value={pageSize}
+                    onChange={(e) => setPageSize(Number(e.target.value))}
+                    className="bg-bgMain border border-borderSubtle rounded-lg px-2 py-1 text-xs text-textPrimary font-bold focus:outline-none focus:border-accentPrimary"
+                  >
+                    <option value={10}>10 / page</option>
+                    <option value={25}>25 / page</option>
+                    <option value={50}>50 / page</option>
+                    <option value={100}>100 / page</option>
+                    <option value={99999}>Show All</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="p-1.5 rounded-lg bg-bgMain border border-borderSubtle hover:bg-bgHover text-textPrimary disabled:opacity-40 disabled:cursor-not-allowed transition"
+                    title="Previous Page"
+                  >
+                    <ChevronLeft className="w-3.5 h-3.5" />
+                  </button>
+                  <span className="px-2 py-0.5 font-mono font-bold text-xs text-textPrimary">
+                    {currentPage} / {totalPages || 1}
+                  </span>
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={currentPage >= totalPages}
+                    className="p-1.5 rounded-lg bg-bgMain border border-borderSubtle hover:bg-bgHover text-textPrimary disabled:opacity-40 disabled:cursor-not-allowed transition"
+                    title="Next Page"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
                 <button
                   onClick={loadCustomers}
                   className="p-2 rounded-xl bg-bgMain border border-borderSubtle hover:bg-bgHover text-textSecondary hover:text-textPrimary transition"
