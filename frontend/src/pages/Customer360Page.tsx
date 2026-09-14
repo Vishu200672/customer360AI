@@ -331,13 +331,6 @@ export const Customer360Page: React.FC<Customer360PageProps> = ({
                 >
                   <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
                 </button>
-
-                <button
-                  onClick={() => setIsAddModalOpen(true)}
-                  className="px-3.5 py-1.5 rounded-xl bg-accentPrimary hover:bg-accentPrimary/90 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
-                >
-                  <UserPlus className="w-4 h-4" /> Add Customer
-                </button>
               </div>
             </div>
           </div>
