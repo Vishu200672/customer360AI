@@ -1,0 +1,501 @@
+customer_id,name,email,join_date,preferred_channel,preferred_category,recency_days,frequency_purchases,monetary_total_spend,avg_order_value,website_visits_30d,product_views_30d,cart_additions_30d,cart_abandonments_30d,email_opens_30d,email_clicks_30d,support_tickets_30d,engagement_change_pct,return_rate,discount_dependency_ratio,spend_30d,spend_90d,purchase_velocity,churn_label,purchase_intent_label,clv,archetype
+C1001,Priya Sharma,priya.sharma45@example.com,2024-01-15,Email,Fashion,58,29,555702.15,19162.14,2,11,4,2,0,0,3,-38.4,0.22,0.362,0.0,388991.51,9.7,1,0,138925.54,at_risk
+C1002,Sanya Joshi,sanya.joshi87@example.com,2024-01-15,Phone,Fashion,18,38,122589.72,3226.05,29,82,13,0,13,15,1,35.3,0.052,0.277,36776.92,85812.8,5.0,0,1,284471.94,loyal
+C1003,Rahul Mehta,rahul.mehta29@example.com,2024-01-15,Push,Electronics,3,36,526459.43,14623.87,21,70,16,2,9,15,1,34.1,0.025,0.145,157937.83,368521.6,6.9,0,1,1224221.5,loyal
+C1004,Riya Verma,riya.verma58@example.com,2024-01-15,Phone,Home & Kitchen,20,35,220605.98,6303.03,51,49,7,0,15,8,0,23.4,0.04,0.173,66181.79,154424.19,5.0,0,1,516160.53,loyal
+C1005,Sanya Verma,sanya.verma58@example.com,2024-01-15,SMS,Home & Kitchen,8,7,16846.97,2406.71,42,66,16,9,30,7,0,40.5,0.049,0.582,5054.09,11792.88,44.9,0,1,37371.0,high_intent
+C1006,Riya Patel,riya.patel30@example.com,2024-01-15,SMS,Home & Kitchen,55,5,6196.41,1239.28,7,15,1,1,8,1,1,0.4,0.083,0.214,0.0,4337.49,100.6,1,0,3850.0,low_active
+C1007,Arjun Mehta,arjun.mehta18@example.com,2024-01-15,Phone,Home & Kitchen,9,9,23475.66,2608.41,45,98,12,6,14,9,1,24.6,0.096,0.786,7042.7,16432.96,27.3,0,1,50725.96,high_intent
+C1008,Karan Kumar,karan.kumar84@example.com,2024-01-15,Push,Fashion,23,5,7350.75,1470.15,11,7,1,0,3,2,2,-12.1,0.092,0.332,2205.22,5145.52,87.6,0,0,8012.46,low_active
+C1009,Kavya Rao,kavya.rao18@example.com,2024-01-15,SMS,Sports & Fitness,15,45,391037.01,8689.71,31,95,5,0,25,8,2,6.2,0.074,0.165,117311.1,273725.91,9.4,0,1,680507.11,loyal
+C1010,Rahul Verma,rahul.verma47@example.com,2024-01-15,Email,Beauty & Care,15,3,4457.29,1485.76,12,10,5,0,8,3,2,0.6,0.079,0.255,1337.19,3120.1,158.3,0,0,5895.31,low_active
+C1011,Varun Rao,varun.rao35@example.com,2024-01-15,Push,Fashion,159,3,6150.8,2050.27,0,4,1,1,0,0,2,-43.0,0.229,0.659,0.0,615.08,62.0,1,0,1537.7,dormant
+C1012,Meera Patel,meera.patel17@example.com,2024-01-15,Phone,Electronics,100,3,2030.96,676.99,1,0,0,0,2,1,4,-80.2,0.059,0.495,0.0,203.1,92.0,1,0,1000.0,dormant
+C1013,Neha Mehta,neha.mehta77@example.com,2024-01-15,SMS,Fashion,114,30,228388.01,7612.93,4,6,4,4,3,2,5,-33.6,0.171,0.412,0.0,22838.8,21.7,1,0,32012.91,at_risk
+C1014,Priya Patel,priya.patel38@example.com,2024-01-15,Push,Electronics,21,10,24160.07,2416.01,34,115,15,4,12,17,0,76.2,0.026,0.795,7248.02,16912.05,9.5,0,1,58576.74,high_intent
+C1015,Sanya Verma,sanya.verma14@example.com,2024-01-15,WhatsApp,Sports & Fitness,30,3,3711.52,1237.17,14,20,2,1,7,4,0,-14.8,0.103,0.412,1113.46,2598.06,122.7,0,0,5094.28,low_active
+C1016,Ishita Kumar,ishita.kumar34@example.com,2024-01-15,WhatsApp,Beauty & Care,37,4,9987.18,2496.79,10,19,1,0,2,4,2,-12.8,0.062,0.235,0.0,6991.03,31.5,1,0,10029.79,low_active
+C1017,Rahul Verma,rahul.verma41@example.com,2024-01-15,Email,Sports & Fitness,147,1,1746.6,1746.6,1,1,1,1,0,0,3,-73.5,0.063,0.487,0.0,174.66,226.0,1,0,1000.0,dormant
+C1018,Riya Verma,riya.verma16@example.com,2024-01-15,Phone,Electronics,56,15,231049.58,15403.31,3,8,4,5,1,1,2,-43.1,0.277,0.489,0.0,161734.71,46.5,1,0,30248.6,at_risk
+C1019,Neha Kumar,neha.kumar10@example.com,2024-01-15,Push,Beauty & Care,10,39,445206.83,11415.56,59,96,20,1,14,8,0,31.6,0.049,0.293,133562.05,311644.78,11.0,0,1,912922.68,loyal
+C1020,Ananya Rao,ananya.rao79@example.com,2024-01-15,Push,Electronics,4,9,44079.87,4897.76,52,107,13,4,26,7,0,49.9,0.022,0.443,13223.96,30855.91,10.2,0,1,106768.75,high_intent
+C1021,Rohan Rao,rohan.rao18@example.com,2024-01-15,SMS,Electronics,19,27,282288.51,10455.13,52,30,7,3,24,9,1,16.0,0.046,0.327,84686.55,197601.96,10.0,0,1,608589.36,loyal
+C1022,Aditya Singh,aditya.singh40@example.com,2024-01-15,SMS,Fashion,10,41,312821.25,7629.79,35,34,5,3,11,5,2,31.4,0.026,0.119,93846.38,218974.88,7.3,0,1,684075.46,loyal
+C1023,Aditya Joshi,aditya.joshi43@example.com,2024-01-15,Push,Electronics,76,19,109074.48,5740.76,5,4,4,6,2,2,7,-28.5,0.262,0.553,0.0,76352.14,8.7,1,0,27268.62,at_risk
+C1024,Varun Sharma,varun.sharma95@example.com,2024-01-15,Push,Electronics,107,2,4214.69,2107.34,0,0,0,1,1,0,2,-80.7,0.229,0.624,0.0,421.47,298.5,1,0,1000.0,dormant
+C1025,Aditya Mehta,aditya.mehta74@example.com,2024-01-15,Push,Electronics,20,4,11085.6,2771.4,8,6,1,2,8,2,2,-5.5,0.04,0.268,3325.68,7759.92,132.5,0,0,9715.75,low_active
+C1026,Kabir Gupta,kabir.gupta66@example.com,2024-01-15,SMS,Sports & Fitness,46,11,185968.76,16906.25,2,4,1,4,4,2,3,-32.0,0.101,0.504,0.0,130178.13,54.0,1,0,28568.43,at_risk
+C1027,Kavya Gupta,kavya.gupta15@example.com,2024-01-15,Push,Electronics,90,14,94861.66,6775.83,4,12,1,4,4,1,6,-69.0,0.168,0.677,0.0,66403.16,24.6,1,0,23715.42,at_risk
+C1028,Vikram Patel,vikram.patel30@example.com,2024-01-15,SMS,Electronics,67,18,212749.93,11819.44,7,12,2,4,1,2,2,-39.8,0.173,0.689,0.0,148924.95,11.7,1,0,53187.48,at_risk
+C1029,Arjun Sharma,arjun.sharma70@example.com,2024-01-15,Email,Beauty & Care,134,2,2007.13,1003.56,0,1,0,2,0,1,2,-65.1,0.11,0.471,0.0,200.71,128.5,1,0,1000.0,dormant
+C1030,Kabir Verma,kabir.verma45@example.com,2024-01-15,Phone,Beauty & Care,18,33,333945.29,10119.55,16,39,13,1,16,4,0,22.6,0.014,0.17,100183.59,233761.7,11.8,0,1,672026.51,loyal
+C1031,Tanvi Kumar,tanvi.kumar54@example.com,2024-01-15,SMS,Sports & Fitness,155,1,979.12,979.12,1,4,0,1,0,1,0,-82.8,0.148,0.891,0.0,97.91,351.0,1,0,1000.0,dormant
+C1032,Varun Joshi,varun.joshi97@example.com,2024-01-15,Push,Beauty & Care,3,33,359755.91,10901.69,54,65,8,2,24,8,2,31.7,0.027,0.282,107926.77,251829.14,7.0,0,1,847084.37,loyal
+C1033,Kavya Singh,kavya.singh61@example.com,2024-01-15,Phone,Fashion,69,21,288733.18,13749.2,7,12,2,6,4,1,5,-43.3,0.207,0.336,0.0,202113.23,15.8,1,0,72183.29,at_risk
+C1034,Riya Sharma,riya.sharma48@example.com,2024-01-15,Email,Beauty & Care,52,5,7528.58,1505.72,14,15,4,3,5,2,2,-9.4,0.034,0.377,0.0,5270.01,64.6,1,0,4250.04,low_active
+C1035,Ishita Gupta,ishita.gupta94@example.com,2024-01-15,Push,Sports & Fitness,57,5,4182.47,836.49,9,7,2,2,3,2,0,0.4,0.05,0.394,0.0,2927.73,23.2,1,0,3791.36,low_active
+C1036,Aarav Sharma,aarav.sharma41@example.com,2024-01-15,Phone,Electronics,15,38,423195.43,11136.72,55,98,11,3,23,10,0,18.5,0.076,0.134,126958.63,296236.8,13.6,0,1,685049.59,loyal
+C1037,Vikram Sharma,vikram.sharma23@example.com,2024-01-15,Email,Fashion,111,22,108439.1,4929.05,1,10,2,2,3,0,5,-28.8,0.275,0.403,0.0,10843.91,21.1,1,0,21279.72,at_risk
+C1038,Varun Joshi,varun.joshi86@example.com,2024-01-15,SMS,Sports & Fitness,47,4,10391.56,2597.89,12,19,2,3,5,3,0,1.7,0.078,0.273,0.0,7274.09,88.5,1,0,11404.11,low_active
+C1039,Kabir Joshi,kabir.joshi72@example.com,2024-01-15,Email,Home & Kitchen,15,16,219443.15,13715.2,60,61,12,2,18,9,2,36.5,0.054,0.185,65832.94,153610.2,41.9,0,1,278738.49,loyal
+C1040,Rohan Gupta,rohan.gupta29@example.com,2024-01-15,SMS,Fashion,72,10,153412.47,15341.25,7,8,3,6,3,1,2,-30.1,0.277,0.612,0.0,107388.73,26.6,1,0,38353.12,at_risk
+C1041,Aditya Kumar,aditya.kumar59@example.com,2024-01-15,WhatsApp,Sports & Fitness,15,9,18422.19,2046.91,20,85,17,10,22,19,1,31.3,0.092,0.643,5526.66,12895.53,69.8,0,1,19272.67,high_intent
+C1042,Riya Joshi,riya.joshi87@example.com,2024-01-15,SMS,Fashion,9,39,146967.38,3768.39,46,28,17,2,20,15,0,28.2,0.01,0.14,44090.21,102877.17,6.5,0,1,349173.44,loyal
+C1043,Siddharth Gupta,siddharth.gupta89@example.com,2024-01-15,WhatsApp,Beauty & Care,21,2,11994.64,5997.32,25,94,12,10,24,8,0,65.6,0.038,0.685,3598.39,8396.25,288.0,0,1,16516.94,high_intent
+C1044,Kabir Kumar,kabir.kumar51@example.com,2024-01-15,SMS,Home & Kitchen,11,36,236429.86,6567.5,32,78,13,0,23,4,2,31.1,0.055,0.312,70928.96,165500.9,6.8,0,1,535668.05,loyal
+C1045,Riya Sharma,riya.sharma54@example.com,2024-01-15,WhatsApp,Electronics,16,2,4100.56,2050.28,7,5,5,1,3,2,1,-12.2,0.063,0.28,1230.17,2870.39,129.5,0,0,6024.36,low_active
+C1046,Priya Rao,priya.rao37@example.com,2024-01-15,Push,Home & Kitchen,6,19,278590.01,14662.63,25,64,8,0,17,13,2,18.8,0.072,0.258,83577.0,195013.01,26.6,0,1,448207.59,loyal
+C1047,Arjun Kumar,arjun.kumar35@example.com,2024-01-15,Phone,Fashion,21,3,5717.4,1905.8,14,8,5,0,4,4,2,2.3,0.074,0.259,1715.22,4002.18,35.7,0,0,9532.39,low_active
+C1048,Pooja Verma,pooja.verma74@example.com,2024-01-15,Push,Electronics,41,4,5670.8,1417.7,5,18,3,3,7,2,1,-14.3,0.088,0.253,0.0,3969.56,173.2,1,0,2123.03,low_active
+C1049,Neha Joshi,neha.joshi93@example.com,2024-01-15,Phone,Sports & Fitness,189,2,4815.71,2407.86,1,3,1,1,0,0,2,-44.3,0.124,0.309,0.0,481.57,153.0,1,0,1203.93,dormant
+C1050,Siddharth Patel,siddharth.patel69@example.com,2024-01-15,Phone,Beauty & Care,133,1,1356.37,1356.37,1,2,0,1,0,1,2,-41.7,0.243,0.812,0.0,135.64,613.0,1,0,1000.0,dormant
+C1051,Rahul Mehta,rahul.mehta86@example.com,2024-01-15,Phone,Electronics,111,14,133653.26,9546.66,2,5,4,5,4,0,7,-32.4,0.163,0.368,0.0,13365.33,22.3,1,0,33413.32,at_risk
+C1052,Ishita Chawla,ishita.chawla67@example.com,2024-01-15,WhatsApp,Home & Kitchen,10,8,60680.05,7585.01,64,71,17,9,28,11,1,68.7,0.066,0.439,18204.01,42476.03,5.9,0,1,145233.34,high_intent
+C1053,Riya Joshi,riya.joshi54@example.com,2024-01-15,Phone,Home & Kitchen,14,9,71418.15,7935.35,37,79,16,5,13,17,0,29.8,0.061,0.751,21425.44,49992.7,51.7,0,1,126592.92,high_intent
+C1054,Rahul Verma,rahul.verma78@example.com,2024-01-15,Email,Fashion,45,3,7000.3,2333.43,15,14,1,1,4,2,1,6.1,0.062,0.288,0.0,4900.21,73.0,0,0,8957.0,low_active
+C1055,Neha Mehta,neha.mehta11@example.com,2024-01-15,Email,Home & Kitchen,17,1,2582.25,2582.25,12,14,2,3,2,1,2,11.0,0.112,0.353,774.67,1807.57,576.0,0,0,2589.72,low_active
+C1056,Meera Chawla,meera.chawla71@example.com,2024-01-15,Push,Fashion,4,6,40133.51,6688.92,50,54,10,7,25,7,0,65.5,0.076,0.718,12040.05,28093.46,80.2,0,1,73713.25,high_intent
+C1057,Vikram Gupta,vikram.gupta82@example.com,2024-01-15,WhatsApp,Fashion,105,3,3527.97,1175.99,1,4,0,2,1,1,3,-71.2,0.069,0.647,0.0,352.8,113.7,1,0,1000.0,dormant
+C1058,Meera Rao,meera.rao64@example.com,2024-01-15,Phone,Sports & Fitness,2,18,149759.55,8319.98,28,52,13,0,13,7,0,24.0,0.03,0.248,44927.86,104831.68,19.0,0,1,353921.93,loyal
+C1059,Riya Verma,riya.verma30@example.com,2024-01-15,SMS,Beauty & Care,20,42,124607.8,2966.85,33,29,12,2,17,15,1,33.8,0.035,0.132,37382.34,87225.46,5.0,0,1,281102.85,loyal
+C1060,Rohan Patel,rohan.patel43@example.com,2024-01-15,Phone,Fashion,16,3,19514.87,6504.96,54,68,12,6,14,7,0,35.1,0.07,0.434,5854.46,13660.41,223.3,0,1,24185.17,high_intent
+C1061,Neha Mehta,neha.mehta86@example.com,2024-01-15,Push,Beauty & Care,4,41,374819.25,9141.93,59,63,17,2,24,12,1,23.9,0.055,0.282,112445.77,262373.47,14.9,0,1,531002.94,loyal
+C1062,Siddharth Verma,siddharth.verma86@example.com,2024-01-15,SMS,Home & Kitchen,167,2,3065.2,1532.6,0,0,0,2,2,0,2,-73.9,0.209,0.462,0.0,306.52,35.0,1,0,1000.0,dormant
+C1063,Karan Sharma,karan.sharma32@example.com,2024-01-15,Phone,Beauty & Care,80,13,56338.86,4333.76,7,12,4,2,3,1,5,-73.7,0.293,0.634,0.0,39437.2,39.3,1,0,10060.51,at_risk
+C1064,Rahul Singh,rahul.singh95@example.com,2024-01-15,Email,Home & Kitchen,41,4,6798.79,1699.7,8,17,5,0,5,1,1,-9.8,0.044,0.275,0.0,4759.15,34.2,1,0,7237.2,low_active
+C1065,Kabir Singh,kabir.singh24@example.com,2024-01-15,Phone,Electronics,24,10,61448.73,6144.87,49,92,9,5,26,11,1,66.2,0.042,0.782,18434.62,43014.11,44.3,0,1,119628.6,high_intent
+C1066,Siddharth Sharma,siddharth.sharma36@example.com,2024-01-15,Phone,Fashion,33,4,8078.32,2019.58,15,20,1,0,7,2,2,3.4,0.068,0.274,0.0,5654.82,75.8,0,0,11529.9,low_active
+C1067,Neha Mehta,neha.mehta80@example.com,2024-01-15,Phone,Beauty & Care,56,15,238250.76,15883.38,2,9,1,3,3,2,4,-74.3,0.123,0.318,0.0,166775.53,5.0,1,0,59562.69,at_risk
+C1068,Varun Mehta,varun.mehta63@example.com,2024-01-15,SMS,Fashion,15,21,277058.4,13193.26,39,49,9,0,16,10,1,29.6,0.043,0.124,83117.52,193940.88,25.0,0,1,448923.71,loyal
+C1069,Varun Mehta,varun.mehta10@example.com,2024-01-15,Push,Sports & Fitness,21,9,41198.1,4577.57,29,97,25,7,21,11,1,32.1,0.055,0.559,12359.43,28838.67,35.4,0,1,79676.63,high_intent
+C1070,Siddharth Singh,siddharth.singh34@example.com,2024-01-15,Phone,Beauty & Care,10,8,45024.87,5628.11,22,80,23,9,22,12,0,23.2,0.05,0.65,13507.46,31517.41,34.2,0,1,86005.67,high_intent
+C1071,Ishita Sharma,ishita.sharma26@example.com,2024-01-15,Phone,Home & Kitchen,30,3,21201.55,7067.18,48,52,24,7,10,17,0,66.1,0.033,0.428,6360.46,14841.08,181.3,0,1,33288.33,high_intent
+C1072,Kavya Gupta,kavya.gupta19@example.com,2024-01-15,Push,Home & Kitchen,22,8,13378.59,1672.32,61,50,18,10,27,12,1,61.0,0.095,0.63,4013.58,9365.01,63.8,0,1,21696.01,high_intent
+C1073,Ishita Joshi,ishita.joshi14@example.com,2024-01-15,WhatsApp,Fashion,81,15,209038.5,13935.9,2,8,1,2,3,0,7,-52.1,0.209,0.677,0.0,146326.95,44.1,1,0,28813.84,at_risk
+C1074,Meera Sharma,meera.sharma15@example.com,2024-01-15,WhatsApp,Home & Kitchen,90,19,367464.55,19340.24,7,4,2,6,3,2,7,-29.7,0.139,0.328,0.0,257225.18,19.1,1,0,91866.14,at_risk
+C1075,Neha Gupta,neha.gupta32@example.com,2024-01-15,Phone,Beauty & Care,20,27,73649.87,2727.77,46,99,9,1,22,14,1,8.3,0.058,0.118,22094.96,51554.91,5.0,0,1,159089.07,loyal
+C1076,Siddharth Mehta,siddharth.mehta95@example.com,2024-01-15,SMS,Home & Kitchen,114,13,225717.44,17362.88,2,9,3,6,2,2,5,-73.8,0.263,0.413,0.0,22571.74,5.0,1,0,56429.36,at_risk
+C1077,Kabir Chawla,kabir.chawla48@example.com,2024-01-15,SMS,Beauty & Care,4,27,302648.79,11209.21,39,98,16,2,17,4,2,27.0,0.071,0.284,90794.64,211854.15,8.6,0,1,683188.44,loyal
+C1078,Arjun Mehta,arjun.mehta11@example.com,2024-01-15,WhatsApp,Sports & Fitness,46,3,4261.43,1420.48,7,16,2,1,6,3,2,-9.7,0.098,0.442,0.0,2983.0,203.0,1,0,1911.52,low_active
+C1079,Vikram Verma,vikram.verma90@example.com,2024-01-15,WhatsApp,Home & Kitchen,190,2,2650.47,1325.24,0,4,1,2,0,0,2,-71.4,0.205,0.504,0.0,265.05,345.5,1,0,1000.0,dormant
+C1080,Rahul Kumar,rahul.kumar32@example.com,2024-01-15,Email,Sports & Fitness,136,3,6650.48,2216.83,2,2,0,1,1,1,2,-68.6,0.2,0.753,0.0,665.05,78.3,1,0,1662.62,dormant
+C1081,Priya Chawla,priya.chawla19@example.com,2024-01-15,Email,Beauty & Care,18,35,482366.9,13781.91,20,75,5,2,25,5,1,22.7,0.068,0.18,144710.07,337656.83,5.0,0,1,986019.77,loyal
+C1082,Pooja Mehta,pooja.mehta84@example.com,2024-01-15,Push,Electronics,176,1,1278.4,1278.4,1,0,1,2,0,0,3,-89.5,0.231,0.355,0.0,127.84,420.0,1,0,1000.0,dormant
+C1083,Meera Kumar,meera.kumar24@example.com,2024-01-15,WhatsApp,Electronics,83,23,440474.23,19151.05,2,3,2,6,1,1,5,-27.5,0.215,0.553,0.0,308331.96,7.5,1,0,110118.56,at_risk
+C1084,Pooja Joshi,pooja.joshi63@example.com,2024-01-15,Email,Beauty & Care,57,23,183645.41,7984.58,7,6,1,4,1,1,5,-58.6,0.235,0.601,0.0,128551.79,27.4,1,0,26557.28,at_risk
+C1085,Sanya Singh,sanya.singh22@example.com,2024-01-15,Phone,Home & Kitchen,18,4,10148.64,2537.16,8,11,1,3,2,2,2,-12.3,0.074,0.217,3044.59,7104.05,101.5,1,0,9998.22,low_active
+C1086,Tanvi Sharma,tanvi.sharma16@example.com,2024-01-15,Email,Fashion,28,5,21849.74,4369.95,24,110,14,8,16,19,0,82.1,0.048,0.447,6554.92,15294.82,74.2,0,1,50175.3,high_intent
+C1087,Rahul Gupta,rahul.gupta86@example.com,2024-01-15,Push,Fashion,5,28,336528.72,12018.88,26,39,5,1,8,9,0,26.6,0.017,0.121,100958.62,235570.1,5.0,0,1,787041.97,loyal
+C1088,Karan Singh,karan.singh12@example.com,2024-01-15,Push,Electronics,23,4,3840.31,960.08,12,8,1,3,5,3,2,9.7,0.094,0.224,1152.09,2688.22,52.0,0,0,5596.26,low_active
+C1089,Karan Verma,karan.verma67@example.com,2024-01-15,Email,Sports & Fitness,2,45,667484.76,14832.99,34,83,5,0,23,10,1,18.1,0.036,0.303,200245.43,467239.33,12.1,0,1,1040524.51,loyal
+C1090,Priya Chawla,priya.chawla66@example.com,2024-01-15,WhatsApp,Home & Kitchen,167,1,2472.0,2472.0,0,1,1,2,2,1,3,-52.3,0.125,0.35,0.0,247.2,105.0,1,0,1000.0,dormant
+C1091,Tanvi Joshi,tanvi.joshi47@example.com,2024-01-15,Phone,Sports & Fitness,42,1,2028.49,2028.49,15,8,5,1,5,4,0,-2.3,0.112,0.233,0.0,1419.94,494.0,0,0,2052.6,low_active
+C1092,Kavya Singh,kavya.singh68@example.com,2024-01-15,SMS,Electronics,13,8,12590.39,1573.8,40,72,19,5,25,7,0,52.8,0.025,0.448,3777.12,8813.27,54.8,0,1,24753.33,high_intent
+C1093,Rohan Verma,rohan.verma65@example.com,2024-01-15,Push,Fashion,18,15,159226.93,10615.13,52,96,15,0,21,9,2,31.1,0.051,0.341,47768.08,111458.85,8.5,0,1,368515.77,loyal
+C1094,Kavya Sharma,kavya.sharma46@example.com,2024-01-15,Push,Home & Kitchen,58,26,204284.74,7857.11,4,4,4,3,0,1,6,-31.6,0.145,0.685,0.0,142999.32,24.8,1,0,28945.63,at_risk
+C1095,Pooja Verma,pooja.verma45@example.com,2024-01-15,Email,Beauty & Care,18,13,190105.31,14623.49,53,59,5,1,16,15,1,6.5,0.072,0.232,57031.59,133073.72,47.5,0,1,248378.49,loyal
+C1096,Rahul Singh,rahul.singh10@example.com,2024-01-15,Email,Sports & Fitness,174,2,1295.19,647.59,0,1,0,0,2,0,3,-62.3,0.244,0.614,0.0,129.52,107.5,1,0,1000.0,dormant
+C1097,Kavya Chawla,kavya.chawla53@example.com,2024-01-15,Push,Home & Kitchen,26,7,42156.57,6022.37,69,112,10,4,14,8,0,51.8,0.07,0.634,12646.97,29509.6,27.3,0,1,100780.59,high_intent
+C1098,Rohan Mehta,rohan.mehta66@example.com,2024-01-15,SMS,Sports & Fitness,146,2,1181.79,590.89,1,1,0,1,1,0,2,-76.0,0.24,0.834,0.0,118.18,232.0,1,0,1000.0,dormant
+C1099,Karan Chawla,karan.chawla77@example.com,2024-01-15,WhatsApp,Fashion,15,2,11061.72,5530.86,20,66,17,5,14,18,1,39.4,0.035,0.585,3318.52,7743.2,172.5,0,1,24110.66,high_intent
+C1100,Meera Singh,meera.singh25@example.com,2024-01-15,SMS,Beauty & Care,67,12,155065.85,12922.15,7,10,2,6,4,2,4,-71.1,0.295,0.694,0.0,108546.1,5.0,1,0,38766.46,at_risk
+C1101,Rohan Kumar,rohan.kumar15@example.com,2024-01-15,WhatsApp,Beauty & Care,19,3,5938.24,1979.41,13,18,5,3,7,4,1,-5.7,0.103,0.405,1781.47,4156.77,158.7,0,0,6549.23,low_active
+C1102,Priya Kumar,priya.kumar12@example.com,2024-01-15,Email,Sports & Fitness,15,35,486030.64,13886.59,20,80,8,1,21,13,1,33.8,0.076,0.281,145809.19,340221.45,10.3,0,1,1099079.61,loyal
+C1103,Varun Verma,varun.verma60@example.com,2024-01-15,Push,Fashion,13,4,16874.32,4218.58,24,105,11,8,26,9,1,85.3,0.089,0.418,5062.3,11812.02,86.8,0,1,39798.64,high_intent
+C1104,Pooja Gupta,pooja.gupta40@example.com,2024-01-15,Email,Home & Kitchen,7,23,165733.22,7205.79,53,44,7,1,23,11,2,33.4,0.079,0.138,49719.97,116013.25,5.9,0,1,392437.23,loyal
+C1105,Karan Chawla,karan.chawla97@example.com,2024-01-15,Phone,Home & Kitchen,30,7,27830.53,3975.79,29,96,10,7,24,16,1,87.9,0.087,0.735,8349.16,19481.37,86.9,0,1,39105.7,high_intent
+C1106,Kabir Rao,kabir.rao17@example.com,2024-01-15,Phone,Electronics,12,9,37766.94,4196.33,48,44,9,6,19,7,0,39.1,0.025,0.746,11330.08,26436.86,43.3,0,1,81372.17,high_intent
+C1107,Tanvi Rao,tanvi.rao74@example.com,2024-01-15,SMS,Sports & Fitness,50,1,2999.38,2999.38,11,11,3,3,6,2,0,14.9,0.08,0.431,0.0,2099.57,423.0,0,0,3246.43,low_active
+C1108,Siddharth Verma,siddharth.verma53@example.com,2024-01-15,Phone,Fashion,95,1,2199.29,2199.29,2,3,1,2,2,0,2,-77.6,0.14,0.377,0.0,219.93,116.0,1,0,1000.0,dormant
+C1109,Pooja Mehta,pooja.mehta59@example.com,2024-01-15,Push,Sports & Fitness,96,3,5137.05,1712.35,2,2,0,1,0,1,2,-78.6,0.184,0.671,0.0,513.71,149.3,1,0,1046.33,dormant
+C1110,Kabir Rao,kabir.rao29@example.com,2024-01-15,WhatsApp,Sports & Fitness,63,19,93679.1,4930.48,5,12,4,3,4,2,2,-41.4,0.204,0.609,0.0,65575.37,19.5,1,0,23041.02,at_risk
+C1111,Meera Joshi,meera.joshi58@example.com,2024-01-15,Push,Fashion,24,10,70391.8,7039.18,25,94,24,6,10,11,1,58.6,0.065,0.751,21117.54,49274.26,68.8,0,1,82124.05,high_intent
+C1112,Neha Patel,neha.patel53@example.com,2024-01-15,Email,Fashion,62,12,63339.11,5278.26,2,6,1,6,4,2,6,-73.6,0.251,0.548,0.0,44337.38,43.9,1,0,10967.16,at_risk
+C1113,Ananya Singh,ananya.singh89@example.com,2024-01-15,Phone,Beauty & Care,24,2,2537.04,1268.52,6,10,4,0,5,3,2,-10.9,0.031,0.305,761.11,1775.93,82.0,0,0,3191.49,low_active
+C1114,Sanya Chawla,sanya.chawla88@example.com,2024-01-15,SMS,Fashion,20,5,20247.93,4049.59,39,100,14,6,28,13,1,50.6,0.092,0.539,6074.38,14173.55,64.2,0,1,45609.87,high_intent
+C1115,Meera Kumar,meera.kumar74@example.com,2024-01-15,SMS,Fashion,29,5,32968.72,6593.74,58,57,16,4,30,13,1,47.8,0.07,0.745,9890.62,23078.1,114.0,0,1,48729.56,high_intent
+C1116,Riya Verma,riya.verma76@example.com,2024-01-15,Push,Electronics,187,1,794.15,794.15,1,3,0,1,0,0,3,-43.7,0.148,0.455,0.0,79.42,157.0,1,0,1000.0,dormant
+C1117,Pooja Sharma,pooja.sharma63@example.com,2024-01-15,SMS,Sports & Fitness,14,5,39351.06,7870.21,44,50,19,5,10,11,0,54.5,0.046,0.653,11805.32,27545.74,16.8,0,1,93687.49,high_intent
+C1118,Rahul Gupta,rahul.gupta27@example.com,2024-01-15,Push,Beauty & Care,5,42,144828.25,3448.29,43,25,7,0,16,7,0,9.5,0.019,0.138,43448.47,101379.77,5.0,0,1,337277.13,loyal
+C1119,Riya Rao,riya.rao77@example.com,2024-01-15,WhatsApp,Home & Kitchen,8,31,325838.96,10510.93,22,31,12,3,22,5,0,11.4,0.034,0.324,97751.69,228087.27,14.9,0,1,538801.23,loyal
+C1120,Ishita Rao,ishita.rao78@example.com,2024-01-15,Phone,Sports & Fitness,10,4,23356.5,5839.13,38,94,8,8,21,9,1,32.1,0.035,0.416,7006.95,16349.55,11.5,0,1,48597.86,high_intent
+C1121,Neha Verma,neha.verma77@example.com,2024-01-15,WhatsApp,Sports & Fitness,18,44,263224.69,5982.38,47,95,5,3,23,4,2,11.2,0.016,0.13,78967.41,184257.28,9.1,0,1,470599.41,loyal
+C1122,Arjun Singh,arjun.singh42@example.com,2024-01-15,Push,Electronics,14,5,14205.85,2841.17,66,120,11,10,28,17,1,45.5,0.06,0.676,4261.76,9944.09,9.2,0,1,32233.94,high_intent
+C1123,Vikram Sharma,vikram.sharma55@example.com,2024-01-15,Push,Fashion,15,42,524690.46,12492.63,55,48,9,0,22,4,1,27.0,0.016,0.318,157407.14,367283.32,14.0,0,1,762361.65,loyal
+C1124,Aditya Sharma,aditya.sharma35@example.com,2024-01-15,Push,Home & Kitchen,155,2,1244.31,622.16,2,3,1,0,2,0,2,-76.2,0.211,0.749,0.0,124.43,36.0,1,0,1000.0,dormant
+C1125,Pooja Sharma,pooja.sharma93@example.com,2024-01-15,Push,Electronics,12,39,199557.8,5116.87,40,81,17,2,13,11,2,18.0,0.044,0.255,59867.34,139690.46,9.5,0,1,425794.84,loyal
+C1126,Ishita Singh,ishita.singh76@example.com,2024-01-15,WhatsApp,Beauty & Care,55,21,228124.89,10863.09,3,10,3,4,0,0,4,-37.6,0.107,0.401,0.0,159687.42,14.4,1,0,57031.22,at_risk
+C1127,Meera Mehta,meera.mehta67@example.com,2024-01-15,SMS,Fashion,59,4,11077.82,2769.46,9,19,1,2,6,4,1,0.4,0.078,0.232,0.0,7754.47,161.8,1,0,4696.32,low_active
+C1128,Ananya Verma,ananya.verma95@example.com,2024-01-15,SMS,Home & Kitchen,110,29,349580.31,12054.49,3,2,2,6,3,0,3,-62.9,0.154,0.451,0.0,34958.03,23.5,1,0,46773.03,at_risk
+C1129,Rohan Patel,rohan.patel92@example.com,2024-01-15,Push,Beauty & Care,19,14,91363.85,6525.99,53,44,19,2,19,11,0,12.4,0.033,0.13,27409.16,63954.69,28.9,0,1,185075.76,loyal
+C1130,Karan Gupta,karan.gupta77@example.com,2024-01-15,SMS,Home & Kitchen,173,2,3374.37,1687.18,0,0,0,2,0,1,4,-56.0,0.208,0.599,0.0,337.44,202.5,1,0,1000.0,dormant
+C1131,Arjun Joshi,arjun.joshi25@example.com,2024-01-15,Push,Beauty & Care,7,30,276414.95,9213.83,59,87,11,0,12,5,1,25.5,0.062,0.208,82924.49,193490.46,9.9,0,1,659825.69,loyal
+C1132,Neha Chawla,neha.chawla21@example.com,2024-01-15,Push,Electronics,18,30,181415.96,6047.2,34,45,10,2,24,7,0,17.7,0.055,0.243,54424.79,126991.17,11.9,0,1,395612.08,loyal
+C1133,Aditya Gupta,aditya.gupta40@example.com,2024-01-15,WhatsApp,Home & Kitchen,115,26,514039.74,19770.76,6,9,2,6,0,0,4,-44.7,0.147,0.341,0.0,51403.97,20.6,1,0,87675.0,at_risk
+C1134,Arjun Chawla,arjun.chawla77@example.com,2024-01-15,SMS,Sports & Fitness,3,20,111489.43,5574.47,35,34,19,3,24,9,0,10.6,0.023,0.171,33446.83,78042.6,22.5,0,1,202355.93,loyal
+C1135,Riya Rao,riya.rao33@example.com,2024-01-15,SMS,Sports & Fitness,2,19,260481.79,13709.57,48,44,14,1,13,9,2,7.8,0.047,0.203,78144.54,182337.25,8.5,0,1,583521.43,loyal
+C1136,Sanya Singh,sanya.singh76@example.com,2024-01-15,WhatsApp,Home & Kitchen,115,3,2172.23,724.08,2,2,0,2,1,0,4,-70.1,0.244,0.819,0.0,217.22,106.7,1,0,1000.0,dormant
+C1137,Neha Rao,neha.rao84@example.com,2024-01-15,Email,Sports & Fitness,53,3,4102.16,1367.39,13,6,1,0,2,3,2,-9.9,0.09,0.479,0.0,2871.51,62.3,1,0,3111.4,low_active
+C1138,Aditya Rao,aditya.rao63@example.com,2024-01-15,WhatsApp,Beauty & Care,23,10,52154.82,5215.48,38,78,23,5,22,10,1,39.6,0.082,0.475,15646.45,36508.37,66.2,0,1,62062.61,high_intent
+C1139,Rohan Sharma,rohan.sharma30@example.com,2024-01-15,SMS,Beauty & Care,104,14,143253.87,10232.42,6,11,2,4,2,2,4,-49.6,0.148,0.346,0.0,14325.39,34.3,1,0,27233.16,at_risk
+C1140,Arjun Gupta,arjun.gupta57@example.com,2024-01-15,Phone,Electronics,13,5,16880.49,3376.1,49,55,16,7,17,8,0,60.7,0.032,0.592,5064.15,11816.34,111.4,0,1,26286.18,high_intent
+C1141,Ananya Mehta,ananya.mehta59@example.com,2024-01-15,SMS,Fashion,30,4,7347.41,1836.85,40,113,18,5,15,13,1,43.6,0.031,0.425,2204.22,5143.19,165.0,0,1,8738.11,high_intent
+C1142,Ishita Mehta,ishita.mehta73@example.com,2024-01-15,WhatsApp,Beauty & Care,154,2,2289.42,1144.71,0,1,1,0,0,1,3,-49.5,0.101,0.709,0.0,228.94,26.5,1,0,1000.0,dormant
+C1143,Tanvi Chawla,tanvi.chawla46@example.com,2024-01-15,WhatsApp,Electronics,42,2,4220.81,2110.41,8,16,4,2,2,4,0,-0.9,0.067,0.305,0.0,2954.57,289.5,1,0,3233.58,low_active
+C1144,Karan Joshi,karan.joshi34@example.com,2024-01-15,Phone,Home & Kitchen,99,2,4322.48,2161.24,2,3,1,2,2,0,1,-41.7,0.075,0.739,0.0,432.25,200.5,1,0,1000.0,dormant
+C1145,Priya Kumar,priya.kumar57@example.com,2024-01-15,Phone,Home & Kitchen,186,1,862.47,862.47,0,4,1,2,0,0,0,-86.7,0.198,0.645,0.0,86.25,377.0,1,0,1000.0,dormant
+C1146,Vikram Singh,vikram.singh70@example.com,2024-01-15,SMS,Fashion,53,5,5537.5,1107.5,6,15,5,2,3,4,2,8.9,0.048,0.249,0.0,3876.25,112.2,1,0,3010.14,low_active
+C1147,Meera Rao,meera.rao53@example.com,2024-01-15,Phone,Sports & Fitness,16,31,393147.7,12682.18,45,27,16,2,11,10,2,28.3,0.047,0.19,117944.31,275203.39,17.7,0,1,581429.48,loyal
+C1148,Meera Sharma,meera.sharma86@example.com,2024-01-15,Push,Sports & Fitness,163,1,1284.89,1284.89,2,0,1,0,2,1,1,-49.2,0.138,0.526,0.0,128.49,515.0,1,0,1000.0,dormant
+C1149,Sanya Sharma,sanya.sharma83@example.com,2024-01-15,Email,Electronics,17,7,24212.69,3458.96,46,59,21,9,16,12,1,72.3,0.06,0.493,7263.81,16948.88,20.3,0,1,56480.89,high_intent
+C1150,Ananya Gupta,ananya.gupta76@example.com,2024-01-15,Phone,Home & Kitchen,174,2,2535.56,1267.78,2,3,1,0,1,1,4,-62.8,0.231,0.675,0.0,253.56,121.0,1,0,1000.0,dormant
+C1151,Pooja Mehta,pooja.mehta88@example.com,2024-01-15,Email,Fashion,9,31,441684.95,14247.9,29,63,14,1,23,9,1,27.0,0.033,0.135,132505.48,309179.46,16.9,0,1,701100.3,loyal
+C1152,Pooja Joshi,pooja.joshi45@example.com,2024-01-15,WhatsApp,Sports & Fitness,58,5,10820.8,2164.16,10,17,3,1,4,1,1,1.0,0.11,0.437,0.0,7574.56,64.8,1,0,9097.24,low_active
+C1153,Rohan Singh,rohan.singh66@example.com,2024-01-15,SMS,Fashion,7,29,185499.25,6396.53,50,59,9,0,15,7,0,13.7,0.062,0.108,55649.78,129849.47,10.1,0,1,437311.95,loyal
+C1154,Varun Patel,varun.patel91@example.com,2024-01-15,WhatsApp,Electronics,16,7,45191.87,6455.98,65,100,11,9,14,6,0,81.4,0.047,0.729,13557.56,31634.31,38.3,0,1,109507.49,high_intent
+C1155,Kavya Chawla,kavya.chawla71@example.com,2024-01-15,Email,Home & Kitchen,11,30,392419.61,13080.65,56,32,7,1,25,15,2,9.5,0.038,0.299,117725.88,274693.73,23.2,0,1,461710.0,loyal
+C1156,Ananya Gupta,ananya.gupta63@example.com,2024-01-15,WhatsApp,Beauty & Care,16,23,123409.78,5365.64,33,29,5,2,11,9,1,30.3,0.06,0.26,37022.93,86386.85,9.1,0,1,275998.73,loyal
+C1157,Siddharth Joshi,siddharth.joshi77@example.com,2024-01-15,Email,Sports & Fitness,44,3,5981.98,1993.99,7,8,3,1,7,4,2,-7.4,0.061,0.254,0.0,4187.39,178.3,1,0,3400.44,low_active
+C1158,Kabir Gupta,kabir.gupta11@example.com,2024-01-15,Push,Sports & Fitness,176,1,1666.78,1666.78,0,4,1,1,2,1,0,-70.0,0.142,0.868,0.0,166.68,375.0,1,0,1000.0,dormant
+C1159,Arjun Verma,arjun.verma33@example.com,2024-01-15,SMS,Home & Kitchen,8,12,117934.47,9827.87,31,74,12,3,16,9,1,22.7,0.053,0.105,35380.34,82554.13,14.4,0,1,259727.45,loyal
+C1160,Karan Rao,karan.rao11@example.com,2024-01-15,Push,Fashion,97,3,7092.71,2364.24,0,3,1,0,1,1,0,-61.7,0.189,0.853,0.0,709.27,99.0,1,0,1773.18,dormant
+C1161,Meera Singh,meera.singh88@example.com,2024-01-15,Email,Fashion,45,2,2271.17,1135.59,11,16,4,3,8,2,0,2.3,0.085,0.327,0.0,1589.82,128.0,1,0,2561.15,low_active
+C1162,Tanvi Verma,tanvi.verma77@example.com,2024-01-15,Phone,Home & Kitchen,19,5,14278.04,2855.61,5,6,5,1,6,2,0,12.8,0.071,0.234,4283.41,9994.63,97.4,0,0,20598.39,low_active
+C1163,Rahul Joshi,rahul.joshi66@example.com,2024-01-15,Email,Sports & Fitness,152,1,2177.8,2177.8,2,3,0,1,0,1,3,-83.8,0.234,0.822,0.0,217.78,149.0,1,0,1000.0,dormant
+C1164,Karan Sharma,karan.sharma81@example.com,2024-01-15,Push,Electronics,15,6,32059.74,5343.29,20,67,10,4,23,11,0,47.9,0.024,0.534,9617.92,22441.82,83.8,0,1,53466.68,high_intent
+C1165,Riya Sharma,riya.sharma18@example.com,2024-01-15,WhatsApp,Home & Kitchen,41,2,1620.38,810.19,6,18,3,3,5,4,1,-5.0,0.066,0.361,0.0,1134.27,256.5,1,0,1031.32,low_active
+C1166,Rohan Joshi,rohan.joshi27@example.com,2024-01-15,Push,Electronics,112,3,3578.08,1192.69,1,4,0,2,0,0,0,-72.7,0.198,0.571,0.0,357.81,233.0,1,0,1000.0,dormant
+C1167,Meera Chawla,meera.chawla96@example.com,2024-01-15,SMS,Sports & Fitness,13,26,212042.84,8155.49,30,83,16,1,16,7,2,9.9,0.022,0.225,63612.85,148429.99,22.6,0,1,266122.57,loyal
+C1168,Priya Sharma,priya.sharma94@example.com,2024-01-15,Phone,Electronics,75,14,259733.32,18552.38,2,3,1,5,4,2,7,-56.9,0.216,0.553,0.0,181813.32,32.8,1,0,51635.44,at_risk
+C1169,Ananya Patel,ananya.patel15@example.com,2024-01-15,SMS,Fashion,18,25,269855.43,10794.22,18,42,14,1,18,13,2,11.2,0.077,0.137,80956.63,188898.8,17.6,0,1,426819.53,loyal
+C1170,Rahul Patel,rahul.patel48@example.com,2024-01-15,Phone,Fashion,97,17,75666.05,4450.94,5,2,2,5,4,1,2,-25.2,0.2,0.538,0.0,7566.61,10.4,1,0,18916.51,at_risk
+C1171,Pooja Kumar,pooja.kumar77@example.com,2024-01-15,SMS,Beauty & Care,5,31,368109.68,11874.51,39,48,20,1,15,8,2,12.3,0.073,0.151,110432.9,257676.78,11.5,0,1,809156.36,loyal
+C1172,Vikram Chawla,vikram.chawla17@example.com,2024-01-15,SMS,Beauty & Care,18,45,133059.19,2956.87,23,74,12,2,14,9,2,21.5,0.05,0.116,39917.76,93141.43,13.4,0,1,159558.38,loyal
+C1173,Rohan Chawla,rohan.chawla57@example.com,2024-01-15,Phone,Fashion,18,3,5391.71,1797.24,10,6,1,1,8,2,1,0.7,0.07,0.32,1617.51,3774.2,41.3,0,0,9101.66,low_active
+C1174,Aditya Singh,aditya.singh48@example.com,2024-01-15,Email,Fashion,26,3,7527.18,2509.06,67,101,15,9,29,17,0,32.7,0.089,0.778,2258.15,5269.03,15.0,0,1,16373.94,high_intent
+C1175,Arjun Patel,arjun.patel80@example.com,2024-01-15,Push,Beauty & Care,104,25,190066.49,7602.66,6,6,3,4,4,1,5,-42.8,0.182,0.31,0.0,19006.65,14.4,1,0,47516.62,at_risk
+C1176,Priya Chawla,priya.chawla50@example.com,2024-01-15,Push,Home & Kitchen,14,14,160295.14,11449.65,51,53,9,0,16,12,2,28.1,0.012,0.155,48088.54,112206.6,17.0,0,1,373336.05,loyal
+C1177,Karan Kumar,karan.kumar47@example.com,2024-01-15,Email,Home & Kitchen,8,36,392351.73,10898.66,51,56,20,2,16,11,2,5.7,0.017,0.3,117705.52,274646.21,5.2,0,1,845365.58,loyal
+C1178,Ishita Chawla,ishita.chawla31@example.com,2024-01-15,Email,Fashion,18,43,458351.03,10659.33,26,94,6,0,10,14,0,13.3,0.017,0.161,137505.31,320845.72,9.1,0,1,952271.77,loyal
+C1179,Aarav Kumar,aarav.kumar27@example.com,2024-01-15,Email,Electronics,60,2,5365.06,2682.53,4,11,5,3,4,1,2,9.9,0.066,0.4,0.0,3755.54,337.5,1,0,1740.5,low_active
+C1180,Tanvi Chawla,tanvi.chawla94@example.com,2024-01-15,WhatsApp,Electronics,18,38,234245.17,6164.35,15,27,13,2,8,12,2,36.4,0.011,0.121,70273.55,163971.62,13.9,0,1,341709.13,loyal
+C1181,Kavya Gupta,kavya.gupta23@example.com,2024-01-15,Phone,Fashion,8,24,67959.66,2831.65,54,92,13,2,16,10,0,11.4,0.051,0.205,20387.9,47571.76,5.3,0,1,157485.16,loyal
+C1182,Pooja Kumar,pooja.kumar68@example.com,2024-01-15,Email,Fashion,128,3,6404.66,2134.89,0,0,0,1,1,1,4,-72.9,0.102,0.528,0.0,640.47,202.7,1,0,1000.0,dormant
+C1183,Ishita Sharma,ishita.sharma91@example.com,2024-01-15,Email,Electronics,18,8,25939.31,3242.41,61,82,11,8,11,9,0,63.7,0.053,0.621,7781.79,18157.52,5.0,0,1,61715.79,high_intent
+C1184,Karan Chawla,karan.chawla44@example.com,2024-01-15,WhatsApp,Home & Kitchen,114,26,208153.87,8005.92,1,4,3,2,1,2,3,-27.6,0.253,0.356,0.0,20815.39,5.0,1,0,52038.47,at_risk
+C1185,Arjun Verma,arjun.verma48@example.com,2024-01-15,Phone,Fashion,162,2,2949.72,1474.86,2,4,1,1,2,0,0,-45.3,0.21,0.555,0.0,294.97,98.0,1,0,1000.0,dormant
+C1186,Varun Singh,varun.singh16@example.com,2024-01-15,SMS,Fashion,3,33,193329.41,5858.47,53,75,15,0,16,11,1,24.0,0.054,0.164,57998.82,135330.59,5.0,0,1,463343.12,loyal
+C1187,Sanya Singh,sanya.singh80@example.com,2024-01-15,SMS,Fashion,19,36,465718.61,12936.63,20,62,12,0,10,8,0,39.5,0.047,0.143,139715.58,326003.03,11.5,0,1,954097.83,loyal
+C1188,Arjun Gupta,arjun.gupta59@example.com,2024-01-15,Push,Electronics,56,8,26501.13,3312.64,5,9,3,4,0,0,2,-29.3,0.124,0.531,0.0,18550.79,44.2,1,0,6625.28,at_risk
+C1189,Neha Kumar,neha.kumar67@example.com,2024-01-15,Phone,Sports & Fitness,97,11,136631.29,12421.03,1,3,3,6,0,2,6,-42.4,0.266,0.383,0.0,13663.13,54.5,1,0,20779.34,at_risk
+C1190,Rahul Kumar,rahul.kumar11@example.com,2024-01-15,SMS,Beauty & Care,3,27,113698.9,4211.07,51,91,10,3,13,6,1,36.5,0.071,0.249,34109.67,79589.23,12.1,0,1,269838.93,loyal
+C1191,Meera Mehta,meera.mehta73@example.com,2024-01-15,WhatsApp,Fashion,16,6,34936.43,5822.74,46,78,23,10,12,11,1,32.3,0.093,0.568,10480.93,24455.5,29.8,0,1,68610.37,high_intent
+C1192,Sanya Chawla,sanya.chawla86@example.com,2024-01-15,Email,Beauty & Care,58,12,141859.21,11821.6,5,2,4,4,4,1,4,-72.7,0.133,0.595,0.0,99301.45,55.1,1,0,19583.44,at_risk
+C1193,Siddharth Singh,siddharth.singh65@example.com,2024-01-15,Phone,Fashion,10,32,321260.84,10039.4,53,50,20,2,13,10,1,13.6,0.037,0.172,96378.25,224882.59,21.8,0,1,381668.2,loyal
+C1194,Meera Chawla,meera.chawla83@example.com,2024-01-15,Push,Beauty & Care,80,20,304475.61,15223.78,6,3,2,6,4,0,7,-60.1,0.213,0.49,0.0,213132.93,13.9,1,0,76118.9,at_risk
+C1195,Riya Sharma,riya.sharma69@example.com,2024-01-15,SMS,Home & Kitchen,59,1,2861.03,2861.03,10,20,2,2,3,3,2,7.0,0.049,0.209,0.0,2002.72,244.0,1,0,2073.8,low_active
+C1196,Vikram Kumar,vikram.kumar58@example.com,2024-01-15,SMS,Sports & Fitness,106,26,341024.45,13116.32,7,10,4,6,0,1,7,-72.4,0.199,0.539,0.0,34102.44,5.0,1,0,85256.11,at_risk
+C1197,Riya Rao,riya.rao91@example.com,2024-01-15,WhatsApp,Fashion,90,13,209371.6,16105.51,1,11,4,4,3,0,2,-69.7,0.115,0.591,0.0,146560.12,9.0,1,0,52342.9,at_risk
+C1198,Priya Mehta,priya.mehta38@example.com,2024-01-15,Phone,Sports & Fitness,21,5,29873.08,5974.62,48,87,20,7,28,17,0,50.4,0.04,0.728,8961.92,20911.16,110.4,0,1,45732.76,high_intent
+C1199,Pooja Sharma,pooja.sharma71@example.com,2024-01-15,Push,Beauty & Care,20,1,2328.33,2328.33,15,9,3,2,4,4,0,-6.8,0.083,0.308,698.5,1629.83,137.0,0,0,3856.92,low_active
+C1200,Varun Chawla,varun.chawla54@example.com,2024-01-15,WhatsApp,Beauty & Care,15,32,446925.43,13966.42,19,63,6,0,8,9,2,9.8,0.077,0.212,134077.63,312847.8,16.2,0,1,623655.2,loyal
+C1201,Priya Gupta,priya.gupta41@example.com,2024-01-15,Email,Sports & Fitness,6,33,306034.14,9273.76,50,79,19,1,20,14,0,35.6,0.061,0.302,91810.24,214223.9,16.9,0,1,485597.37,loyal
+C1202,Neha Kumar,neha.kumar60@example.com,2024-01-15,Phone,Fashion,43,5,11615.04,2323.01,10,17,1,1,3,3,2,10.5,0.052,0.347,0.0,8130.53,11.8,1,0,13933.11,low_active
+C1203,Rohan Rao,rohan.rao23@example.com,2024-01-15,Email,Home & Kitchen,11,24,356300.4,14845.85,44,39,13,3,24,14,1,38.0,0.013,0.276,106890.12,249410.28,24.1,0,1,526700.76,loyal
+C1204,Tanvi Kumar,tanvi.kumar88@example.com,2024-01-15,Phone,Electronics,134,2,1722.3,861.15,1,4,0,2,2,1,4,-61.6,0.233,0.32,0.0,172.23,215.5,1,0,1000.0,dormant
+C1205,Karan Verma,karan.verma96@example.com,2024-01-15,Push,Electronics,30,3,4362.5,1454.17,5,10,3,1,6,4,1,12.7,0.117,0.483,1308.75,3053.75,55.7,0,0,7071.47,low_active
+C1206,Tanvi Gupta,tanvi.gupta83@example.com,2024-01-15,SMS,Fashion,18,10,71032.77,7103.28,64,62,25,5,25,10,0,79.1,0.046,0.732,21309.83,49722.94,42.2,0,1,150760.47,high_intent
+C1207,Neha Singh,neha.singh67@example.com,2024-01-15,WhatsApp,Home & Kitchen,1,43,427995.06,9953.37,23,49,17,3,21,14,1,13.1,0.018,0.119,128398.52,299596.54,15.4,0,1,511412.23,loyal
+C1208,Kavya Chawla,kavya.chawla72@example.com,2024-01-15,WhatsApp,Sports & Fitness,16,2,3095.45,1547.72,8,6,3,1,6,3,0,6.7,0.036,0.295,928.63,2166.81,100.5,0,0,5964.19,low_active
+C1209,Siddharth Rao,siddharth.rao73@example.com,2024-01-15,Phone,Electronics,21,3,19919.1,6639.7,37,109,19,8,11,18,1,42.3,0.07,0.754,5975.73,13943.37,197.3,0,1,25897.48,high_intent
+C1210,Riya Patel,riya.patel64@example.com,2024-01-15,Email,Home & Kitchen,30,2,6028.47,3014.24,48,73,19,10,12,13,0,21.7,0.09,0.409,1808.54,4219.93,67.0,0,1,10466.93,high_intent
+C1211,Sanya Patel,sanya.patel85@example.com,2024-01-15,Phone,Beauty & Care,111,3,4673.62,1557.87,0,1,0,0,2,1,4,-43.0,0.21,0.899,0.0,467.36,129.7,1,0,1096.32,dormant
+C1212,Kabir Rao,kabir.rao78@example.com,2024-01-15,Push,Home & Kitchen,82,26,417097.22,16042.2,5,10,1,3,3,0,4,-54.9,0.196,0.551,0.0,291968.05,7.8,1,0,104274.3,at_risk
+C1213,Vikram Gupta,vikram.gupta41@example.com,2024-01-15,Push,Fashion,187,3,7404.5,2468.17,1,3,0,2,2,1,3,-51.6,0.134,0.553,0.0,740.45,59.7,1,0,1851.12,dormant
+C1214,Arjun Chawla,arjun.chawla19@example.com,2024-01-15,WhatsApp,Beauty & Care,47,3,3975.93,1325.31,15,16,4,3,4,1,2,-11.7,0.062,0.286,0.0,2783.15,226.0,1,0,1310.9,low_active
+C1215,Rohan Chawla,rohan.chawla91@example.com,2024-01-15,WhatsApp,Sports & Fitness,95,14,97598.64,6971.33,7,5,4,4,2,1,4,-72.9,0.104,0.695,0.0,9759.86,28.3,1,0,22489.59,at_risk
+C1216,Riya Rao,riya.rao26@example.com,2024-01-15,SMS,Home & Kitchen,51,9,85801.98,9533.55,2,12,4,2,0,0,5,-41.0,0.144,0.68,0.0,60061.39,67.7,1,0,12856.21,at_risk
+C1217,Siddharth Sharma,siddharth.sharma64@example.com,2024-01-15,Email,Home & Kitchen,25,3,2990.11,996.7,5,16,3,0,4,2,0,-2.5,0.109,0.483,897.03,2093.08,79.0,0,0,4979.65,low_active
+C1218,Arjun Mehta,arjun.mehta99@example.com,2024-01-15,SMS,Electronics,25,3,16461.52,5487.17,20,67,23,4,14,15,0,31.7,0.099,0.493,4938.46,11523.06,89.7,0,1,34665.65,high_intent
+C1219,Varun Chawla,varun.chawla11@example.com,2024-01-15,Push,Electronics,200,2,3598.59,1799.29,2,1,1,0,0,1,0,-59.6,0.153,0.438,0.0,359.86,19.0,1,0,1000.0,dormant
+C1220,Priya Verma,priya.verma50@example.com,2024-01-15,Push,Fashion,13,20,105121.55,5256.08,56,43,7,0,13,11,1,11.5,0.065,0.188,31536.47,73585.08,20.3,0,1,218020.69,loyal
+C1221,Aditya Gupta,aditya.gupta62@example.com,2024-01-15,SMS,Fashion,3,18,263048.09,14613.78,23,40,17,2,21,9,0,35.9,0.075,0.349,78914.43,184133.66,36.7,0,1,343089.57,loyal
+C1222,Sanya Mehta,sanya.mehta92@example.com,2024-01-15,Email,Sports & Fitness,20,30,223590.76,7453.03,59,28,14,1,24,13,2,31.5,0.059,0.138,67077.23,156513.53,5.0,0,1,517968.99,loyal
+C1223,Aditya Kumar,aditya.kumar47@example.com,2024-01-15,WhatsApp,Fashion,46,4,5175.08,1293.77,5,12,4,0,6,1,1,-8.3,0.078,0.378,0.0,3622.56,172.8,1,0,2598.49,low_active
+C1224,Rahul Gupta,rahul.gupta59@example.com,2024-01-15,SMS,Home & Kitchen,20,4,8378.66,2094.66,68,100,10,4,28,7,0,81.4,0.041,0.452,2513.6,5865.06,153.0,0,1,12297.4,high_intent
+C1225,Kabir Patel,kabir.patel15@example.com,2024-01-15,SMS,Sports & Fitness,126,3,7233.91,2411.3,2,4,1,1,2,1,0,-46.9,0.212,0.693,0.0,723.39,30.3,1,0,1808.48,dormant
+C1226,Riya Joshi,riya.joshi88@example.com,2024-01-15,Push,Electronics,12,3,6196.24,2065.41,52,66,12,8,20,12,0,48.6,0.05,0.504,1858.87,4337.37,62.0,0,1,14437.17,high_intent
+C1227,Meera Kumar,meera.kumar40@example.com,2024-01-15,Email,Electronics,42,1,1890.93,1890.93,11,6,3,1,2,1,2,-12.6,0.05,0.405,0.0,1323.65,89.0,1,0,1509.37,low_active
+C1228,Vikram Sharma,vikram.sharma30@example.com,2024-01-15,Push,Sports & Fitness,17,28,367922.42,13140.09,25,72,9,2,11,4,1,22.3,0.044,0.248,110376.73,257545.69,19.2,0,1,519633.09,loyal
+C1229,Kavya Mehta,kavya.mehta77@example.com,2024-01-15,Push,Sports & Fitness,55,1,1565.18,1565.18,11,19,5,2,2,4,2,5.3,0.081,0.28,0.0,1095.63,95.0,1,0,1242.78,low_active
+C1230,Neha Singh,neha.singh30@example.com,2024-01-15,WhatsApp,Sports & Fitness,176,3,6284.56,2094.85,0,1,0,0,0,0,0,-57.1,0.22,0.82,0.0,628.46,97.0,1,0,1571.14,dormant
+C1231,Ishita Singh,ishita.singh59@example.com,2024-01-15,Email,Electronics,50,4,10565.72,2641.43,7,15,2,3,7,3,1,5.9,0.091,0.386,0.0,7396.0,45.8,1,0,9527.95,low_active
+C1232,Rohan Rao,rohan.rao57@example.com,2024-01-15,Phone,Electronics,26,2,2297.86,1148.93,12,6,4,0,5,3,1,11.4,0.108,0.209,689.36,1608.5,76.0,0,0,4180.15,low_active
+C1233,Rahul Verma,rahul.verma80@example.com,2024-01-15,WhatsApp,Home & Kitchen,27,3,3250.54,1083.51,13,14,5,1,5,3,2,-4.9,0.097,0.248,975.16,2275.38,165.7,0,0,3098.26,low_active
+C1234,Ishita Patel,ishita.patel79@example.com,2024-01-15,Email,Electronics,41,1,2630.7,2630.7,7,16,1,2,2,4,2,0.2,0.031,0.286,0.0,1841.49,281.0,1,0,2470.21,low_active
+C1235,Meera Verma,meera.verma36@example.com,2024-01-15,Email,Beauty & Care,18,2,15755.42,7877.71,29,75,10,4,17,20,1,64.2,0.041,0.654,4726.63,11028.79,286.0,0,1,23856.37,high_intent
+C1236,Pooja Chawla,pooja.chawla20@example.com,2024-01-15,WhatsApp,Sports & Fitness,7,8,52551.96,6569.0,24,115,9,7,14,9,1,27.5,0.081,0.617,15765.59,36786.37,78.0,0,1,62124.73,high_intent
+C1237,Kabir Singh,kabir.singh60@example.com,2024-01-15,Push,Beauty & Care,124,1,1183.74,1183.74,0,1,0,2,0,0,0,-58.4,0.236,0.362,0.0,118.37,364.0,1,0,1000.0,dormant
+C1238,Neha Chawla,neha.chawla69@example.com,2024-01-15,SMS,Electronics,158,2,3751.54,1875.77,0,3,1,1,1,0,0,-86.6,0.11,0.725,0.0,375.15,175.5,1,0,1000.0,dormant
+C1239,Neha Mehta,neha.mehta99@example.com,2024-01-15,WhatsApp,Fashion,11,21,205319.75,9777.13,20,56,16,3,24,4,2,17.1,0.053,0.111,61595.92,143723.82,30.8,0,1,220366.08,loyal
+C1240,Meera Mehta,meera.mehta32@example.com,2024-01-15,SMS,Beauty & Care,161,3,7340.93,2446.98,2,1,0,1,0,0,0,-41.6,0.2,0.378,0.0,734.09,20.3,1,0,1835.23,dormant
+C1241,Aarav Sharma,aarav.sharma38@example.com,2024-01-15,Email,Beauty & Care,38,1,854.09,854.09,13,13,1,0,2,2,2,-14.3,0.059,0.347,0.0,597.86,163.0,1,0,1000.0,low_active
+C1242,Siddharth Gupta,siddharth.gupta21@example.com,2024-01-15,WhatsApp,Electronics,44,1,2303.25,2303.25,6,18,4,3,2,4,2,-1.6,0.055,0.499,0.0,1612.27,369.0,1,0,1719.03,low_active
+C1243,Kavya Gupta,kavya.gupta55@example.com,2024-01-15,Email,Home & Kitchen,80,22,234818.75,10673.58,3,2,2,4,3,1,6,-66.8,0.259,0.577,0.0,164373.12,11.3,1,0,58704.69,at_risk
+C1244,Ishita Sharma,ishita.sharma21@example.com,2024-01-15,SMS,Fashion,14,24,84714.31,3529.76,56,92,12,0,20,15,1,28.8,0.056,0.168,25414.29,59300.02,13.2,0,1,202159.17,loyal
+C1245,Ishita Joshi,ishita.joshi72@example.com,2024-01-15,Phone,Sports & Fitness,131,2,1604.23,802.12,1,1,0,1,2,0,0,-68.4,0.239,0.552,0.0,160.42,191.0,1,0,1000.0,dormant
+C1246,Kabir Sharma,kabir.sharma70@example.com,2024-01-15,Push,Sports & Fitness,10,4,16337.45,4084.36,26,71,15,6,27,19,0,39.2,0.099,0.564,4901.23,11436.22,143.0,0,1,23743.1,high_intent
+C1247,Sanya Rao,sanya.rao59@example.com,2024-01-15,Email,Fashion,120,3,2879.73,959.91,1,2,0,2,2,1,4,-79.3,0.056,0.691,0.0,287.97,131.0,1,0,1000.0,dormant
+C1248,Karan Gupta,karan.gupta82@example.com,2024-01-15,SMS,Sports & Fitness,84,13,230023.17,17694.09,8,2,1,2,1,2,3,-51.3,0.294,0.374,0.0,161016.22,17.1,1,0,57505.79,at_risk
+C1249,Aarav Joshi,aarav.joshi71@example.com,2024-01-15,Push,Sports & Fitness,115,1,2053.19,2053.19,1,1,1,0,0,0,4,-51.5,0.219,0.757,0.0,205.32,30.0,1,0,1000.0,dormant
+C1250,Vikram Verma,vikram.verma77@example.com,2024-01-15,WhatsApp,Home & Kitchen,25,8,18824.73,2353.09,57,52,18,6,20,8,0,22.3,0.094,0.647,5647.42,13177.31,50.4,0,1,36002.91,high_intent
+C1251,Kavya Chawla,kavya.chawla93@example.com,2024-01-15,Email,Sports & Fitness,59,5,9296.75,1859.35,9,12,5,1,5,3,2,-11.5,0.041,0.406,0.0,6507.72,70.8,1,0,4902.05,low_active
+C1252,Meera Gupta,meera.gupta32@example.com,2024-01-15,Phone,Beauty & Care,117,9,57680.28,6408.92,3,11,3,6,1,2,6,-50.4,0.113,0.533,0.0,5768.03,5.0,1,0,14420.07,at_risk
+C1253,Priya Chawla,priya.chawla28@example.com,2024-01-15,WhatsApp,Fashion,89,18,298053.08,16558.5,3,12,1,4,3,0,4,-59.5,0.191,0.305,0.0,208637.16,20.5,1,0,73705.54,at_risk
+C1254,Aditya Patel,aditya.patel98@example.com,2024-01-15,Push,Home & Kitchen,4,12,88874.03,7406.17,18,74,19,3,13,10,1,21.8,0.052,0.173,26662.21,62211.82,8.2,0,1,192615.14,loyal
+C1255,Arjun Singh,arjun.singh79@example.com,2024-01-15,WhatsApp,Beauty & Care,51,2,5384.54,2692.27,6,19,1,0,4,1,1,8.4,0.034,0.344,0.0,3769.18,207.0,1,0,5510.09,low_active
+C1256,Kabir Verma,kabir.verma19@example.com,2024-01-15,Email,Beauty & Care,6,16,88409.0,5525.56,50,36,15,3,8,10,2,39.5,0.02,0.225,26522.7,61886.3,23.8,0,1,199250.79,loyal
+C1257,Neha Rao,neha.rao65@example.com,2024-01-15,WhatsApp,Electronics,13,5,30330.11,6066.02,32,92,25,9,27,10,1,59.2,0.021,0.531,9099.03,21231.08,38.0,0,1,67255.54,high_intent
+C1258,Meera Patel,meera.patel22@example.com,2024-01-15,SMS,Sports & Fitness,20,9,18640.19,2071.13,29,46,19,4,23,7,1,44.5,0.023,0.431,5592.06,13048.13,8.9,0,1,41076.39,high_intent
+C1259,Tanvi Chawla,tanvi.chawla35@example.com,2024-01-15,WhatsApp,Fashion,66,28,147172.7,5256.17,5,3,4,2,2,1,5,-46.6,0.238,0.62,0.0,103020.89,5.0,1,0,36793.18,at_risk
+C1260,Ishita Mehta,ishita.mehta21@example.com,2024-01-15,Phone,Beauty & Care,6,35,160773.63,4593.53,39,72,10,3,9,8,1,8.7,0.055,0.277,48232.09,112541.54,19.6,0,1,182987.85,loyal
+C1261,Siddharth Mehta,siddharth.mehta38@example.com,2024-01-15,Phone,Electronics,5,18,255647.76,14202.65,20,69,18,1,25,4,1,6.8,0.048,0.277,76694.33,178953.43,16.9,0,1,532611.21,loyal
+C1262,Varun Kumar,varun.kumar78@example.com,2024-01-15,Phone,Fashion,150,2,3856.35,1928.17,0,3,0,2,2,0,0,-49.9,0.118,0.789,0.0,385.63,258.0,1,0,1000.0,dormant
+C1263,Siddharth Gupta,siddharth.gupta31@example.com,2024-01-15,Email,Fashion,2,39,533723.12,13685.21,20,80,11,1,16,9,2,24.2,0.067,0.213,160116.94,373606.18,6.3,0,1,1186778.63,loyal
+C1264,Rohan Verma,rohan.verma59@example.com,2024-01-15,SMS,Sports & Fitness,13,6,29529.7,4921.62,53,98,8,10,29,15,1,71.2,0.027,0.424,8858.91,20670.79,99.8,0,1,42384.88,high_intent
+C1265,Priya Kumar,priya.kumar29@example.com,2024-01-15,Phone,Sports & Fitness,19,18,80897.55,4494.31,21,97,8,2,25,9,1,35.5,0.025,0.344,24269.26,56628.28,10.1,0,1,177061.94,loyal
+C1266,Kabir Kumar,kabir.kumar93@example.com,2024-01-15,Phone,Sports & Fitness,105,9,54864.04,6096.0,3,6,4,3,4,2,7,-35.5,0.232,0.499,0.0,5486.4,58.6,1,0,9499.7,at_risk
+C1267,Arjun Sharma,arjun.sharma60@example.com,2024-01-15,Email,Electronics,26,9,55573.3,6174.81,37,87,8,6,19,10,1,36.0,0.1,0.79,16671.99,38901.31,41.0,0,1,111521.51,high_intent
+C1268,Ishita Verma,ishita.verma39@example.com,2024-01-15,Push,Beauty & Care,35,3,3716.98,1238.99,15,18,5,0,3,4,0,5.4,0.036,0.209,0.0,2601.89,55.7,0,0,6445.64,low_active
+C1269,Kavya Chawla,kavya.chawla76@example.com,2024-01-15,WhatsApp,Sports & Fitness,65,10,108645.9,10864.59,5,10,4,3,4,2,2,-31.6,0.245,0.597,0.0,76052.13,41.2,1,0,24062.96,at_risk
+C1270,Neha Patel,neha.patel35@example.com,2024-01-15,Email,Electronics,103,9,79928.05,8880.89,6,5,3,4,3,2,5,-56.4,0.298,0.316,0.0,7992.81,9.9,1,0,19982.01,at_risk
+C1271,Priya Sharma,priya.sharma40@example.com,2024-01-15,SMS,Sports & Fitness,147,1,1657.35,1657.35,1,4,1,1,0,1,0,-68.1,0.195,0.592,0.0,165.74,411.0,1,0,1000.0,dormant
+C1272,Meera Sharma,meera.sharma59@example.com,2024-01-15,Email,Sports & Fitness,189,1,2301.4,2301.4,0,1,0,1,2,1,4,-68.9,0.105,0.655,0.0,230.14,80.0,1,0,1000.0,dormant
+C1273,Aarav Sharma,aarav.sharma70@example.com,2024-01-15,Email,Sports & Fitness,192,1,921.32,921.32,0,2,1,2,2,1,3,-58.9,0.176,0.74,0.0,92.13,165.0,1,0,1000.0,dormant
+C1274,Arjun Singh,arjun.singh68@example.com,2024-01-15,Email,Beauty & Care,10,45,515151.54,11447.81,54,75,8,0,24,14,1,36.8,0.023,0.159,154545.46,360606.08,6.4,0,1,1244832.72,loyal
+C1275,Riya Rao,riya.rao87@example.com,2024-01-15,Push,Electronics,151,1,861.95,861.95,1,2,1,1,1,1,1,-47.3,0.148,0.448,0.0,86.2,319.0,1,0,1000.0,dormant
+C1276,Vikram Joshi,vikram.joshi40@example.com,2024-01-15,Phone,Beauty & Care,174,2,2781.22,1390.61,2,1,0,2,1,1,2,-64.3,0.122,0.656,0.0,278.12,44.0,1,0,1000.0,dormant
+C1277,Kavya Kumar,kavya.kumar59@example.com,2024-01-15,Phone,Sports & Fitness,7,33,243821.13,7388.52,60,53,20,2,24,8,0,38.9,0.028,0.264,73146.34,170674.79,5.0,0,1,591386.2,loyal
+C1278,Riya Gupta,riya.gupta47@example.com,2024-01-15,SMS,Fashion,78,25,403726.08,16149.04,3,12,3,2,1,1,3,-68.5,0.294,0.482,0.0,282608.26,5.2,1,0,100931.52,at_risk
+C1279,Meera Kumar,meera.kumar52@example.com,2024-01-15,Push,Sports & Fitness,10,41,140167.08,3418.71,22,85,6,0,23,7,2,10.9,0.046,0.184,42050.12,98116.96,10.0,0,1,257708.33,loyal
+C1280,Priya Kumar,priya.kumar77@example.com,2024-01-15,SMS,Electronics,24,2,3495.91,1747.95,7,15,4,3,3,3,2,-7.5,0.086,0.412,1048.77,2447.14,167.5,1,0,3684.8,low_active
+C1281,Neha Verma,neha.verma72@example.com,2024-01-15,Email,Home & Kitchen,2,12,55142.88,4595.24,43,60,11,1,13,11,0,6.3,0.062,0.266,16542.86,38600.02,30.8,0,1,126131.01,loyal
+C1282,Vikram Rao,vikram.rao65@example.com,2024-01-15,SMS,Beauty & Care,16,9,62883.97,6987.11,44,40,9,8,16,17,1,76.4,0.067,0.747,18865.19,44018.78,75.3,0,1,80627.12,high_intent
+C1283,Aarav Singh,aarav.singh77@example.com,2024-01-15,WhatsApp,Electronics,8,26,101373.88,3899.0,59,69,14,1,11,10,2,14.4,0.014,0.233,30412.16,70961.72,8.7,0,1,232029.63,loyal
+C1284,Karan Mehta,karan.mehta31@example.com,2024-01-15,WhatsApp,Home & Kitchen,127,2,1157.37,578.69,2,4,1,1,2,0,2,-83.9,0.14,0.86,0.0,115.74,48.0,1,0,1000.0,dormant
+C1285,Ishita Singh,ishita.singh34@example.com,2024-01-15,SMS,Electronics,74,15,174344.88,11622.99,3,5,1,6,4,0,2,-72.9,0.13,0.695,0.0,122041.42,13.2,1,0,43586.22,at_risk
+C1286,Pooja Sharma,pooja.sharma58@example.com,2024-01-15,Push,Sports & Fitness,169,1,509.88,509.88,2,0,0,2,0,0,0,-42.4,0.178,0.821,0.0,50.99,685.0,1,0,1000.0,dormant
+C1287,Kavya Chawla,kavya.chawla58@example.com,2024-01-15,Phone,Home & Kitchen,18,4,19405.5,4851.37,33,120,8,6,23,16,0,54.2,0.073,0.456,5821.65,13583.85,39.0,0,1,45085.71,high_intent
+C1288,Varun Mehta,varun.mehta89@example.com,2024-01-15,Email,Beauty & Care,4,44,279361.47,6349.12,54,40,14,0,11,11,0,29.7,0.024,0.268,83808.44,195553.03,14.8,0,1,381228.93,loyal
+C1289,Tanvi Patel,tanvi.patel43@example.com,2024-01-15,Email,Home & Kitchen,180,2,1375.6,687.8,1,1,0,2,1,0,3,-56.4,0.139,0.821,0.0,137.56,282.5,1,0,1000.0,dormant
+C1290,Rahul Patel,rahul.patel10@example.com,2024-01-15,WhatsApp,Electronics,19,43,479786.45,11157.82,24,36,7,0,16,14,0,34.3,0.076,0.271,143935.93,335850.52,5.0,0,1,1118447.75,loyal
+C1291,Siddharth Mehta,siddharth.mehta43@example.com,2024-01-15,WhatsApp,Electronics,29,4,22064.03,5516.01,22,77,19,10,20,12,0,80.8,0.066,0.412,6619.21,15444.82,126.2,0,1,35478.61,high_intent
+C1292,Priya Sharma,priya.sharma11@example.com,2024-01-15,Email,Home & Kitchen,135,2,3758.11,1879.05,2,2,0,1,1,0,0,-56.2,0.093,0.695,0.0,375.81,85.5,1,0,1000.0,dormant
+C1293,Arjun Kumar,arjun.kumar68@example.com,2024-01-15,SMS,Beauty & Care,98,28,393986.9,14070.96,3,3,2,2,1,0,5,-69.7,0.232,0.7,0.0,39398.69,11.0,1,0,98496.73,at_risk
+C1294,Karan Chawla,karan.chawla82@example.com,2024-01-15,Email,Sports & Fitness,13,34,500299.03,14714.68,54,28,9,3,23,5,1,19.2,0.071,0.296,150089.71,350209.32,14.1,0,1,851082.78,loyal
+C1295,Siddharth Sharma,siddharth.sharma18@example.com,2024-01-15,Push,Electronics,25,10,62999.2,6299.92,69,113,15,9,20,14,0,81.5,0.052,0.531,18899.76,44099.44,29.7,0,1,152311.57,high_intent
+C1296,Kavya Patel,kavya.patel71@example.com,2024-01-15,SMS,Fashion,50,5,12886.31,2577.26,4,5,2,3,8,4,0,7.9,0.102,0.331,0.0,9020.42,76.8,1,0,13001.81,low_active
+C1297,Rohan Chawla,rohan.chawla51@example.com,2024-01-15,Push,Home & Kitchen,18,5,5322.3,1064.46,7,17,4,1,2,4,1,1.3,0.031,0.297,1596.69,3725.61,55.2,0,0,8978.91,low_active
+C1298,Karan Chawla,karan.chawla21@example.com,2024-01-15,SMS,Home & Kitchen,60,23,223903.52,9734.94,1,3,4,5,0,2,6,-40.2,0.178,0.479,0.0,156732.46,23.5,1,0,37835.55,at_risk
+C1299,Aarav Verma,aarav.verma87@example.com,2024-01-15,Push,Sports & Fitness,18,25,179141.18,7165.65,56,83,15,2,9,7,1,13.0,0.015,0.251,53742.35,125398.83,26.5,0,1,216343.67,loyal
+C1300,Rahul Joshi,rahul.joshi89@example.com,2024-01-15,SMS,Home & Kitchen,60,4,8651.52,2162.88,5,8,2,0,4,3,2,-1.1,0.064,0.459,0.0,6056.06,161.0,1,0,3362.67,low_active
+C1301,Meera Joshi,meera.joshi76@example.com,2024-01-15,WhatsApp,Electronics,8,9,41532.14,4614.68,28,92,11,6,29,9,0,21.8,0.047,0.552,12459.64,29072.5,45.8,0,1,77942.62,high_intent
+C1302,Priya Kumar,priya.kumar37@example.com,2024-01-15,Email,Home & Kitchen,58,21,270121.54,12862.93,1,12,1,5,3,2,6,-48.3,0.222,0.606,0.0,189085.08,23.7,1,0,49495.16,at_risk
+C1303,Varun Gupta,varun.gupta73@example.com,2024-01-15,Phone,Electronics,50,4,9519.48,2379.87,13,20,5,1,7,2,2,13.7,0.032,0.259,0.0,6663.64,8.5,1,0,10772.13,low_active
+C1304,Vikram Verma,vikram.verma59@example.com,2024-01-15,Phone,Home & Kitchen,17,36,381363.62,10593.43,41,56,13,3,18,8,1,36.4,0.027,0.332,114409.09,266954.53,17.9,0,1,490127.72,loyal
+C1305,Vikram Gupta,vikram.gupta62@example.com,2024-01-15,Phone,Home & Kitchen,18,32,453774.41,14180.45,60,95,11,1,14,13,2,17.3,0.017,0.221,136132.32,317642.09,20.2,0,1,576990.61,loyal
+C1306,Meera Singh,meera.singh96@example.com,2024-01-15,Email,Sports & Fitness,114,30,235285.18,7842.84,6,3,3,6,3,2,6,-59.6,0.261,0.516,0.0,23528.52,5.5,1,0,58821.29,at_risk
+C1307,Kavya Joshi,kavya.joshi46@example.com,2024-01-15,WhatsApp,Sports & Fitness,58,8,107005.39,13375.67,7,4,1,2,1,1,3,-39.2,0.155,0.465,0.0,74903.77,57.8,1,0,21134.72,at_risk
+C1308,Meera Mehta,meera.mehta28@example.com,2024-01-15,Push,Fashion,18,14,66701.14,4764.37,37,82,8,1,25,10,0,28.8,0.023,0.231,20010.34,46690.8,6.6,0,1,154394.44,loyal
+C1309,Varun Mehta,varun.mehta98@example.com,2024-01-15,SMS,Beauty & Care,41,3,3105.39,1035.13,12,6,1,2,3,4,0,2.0,0.053,0.489,0.0,2173.77,26.0,0,0,4163.79,low_active
+C1310,Pooja Rao,pooja.rao79@example.com,2024-01-15,Email,Fashion,12,9,60650.56,6738.95,31,49,13,5,26,7,1,58.5,0.023,0.653,18195.17,42455.39,71.9,0,1,79599.87,high_intent
+C1311,Ananya Kumar,ananya.kumar45@example.com,2024-01-15,Push,Fashion,110,3,5109.67,1703.22,1,0,1,1,2,0,0,-49.0,0.227,0.437,0.0,510.97,199.7,1,0,1000.0,dormant
+C1312,Vikram Singh,vikram.singh86@example.com,2024-01-15,Phone,Home & Kitchen,16,34,344666.92,10137.26,19,65,12,1,24,5,2,19.4,0.069,0.325,103400.08,241266.84,5.0,0,1,684497.99,loyal
+C1313,Neha Kumar,neha.kumar79@example.com,2024-01-15,SMS,Electronics,89,15,105401.99,7026.8,4,12,3,4,2,1,3,-36.0,0.155,0.629,0.0,73781.39,38.6,1,0,16611.28,at_risk
+C1314,Tanvi Joshi,tanvi.joshi70@example.com,2024-01-15,WhatsApp,Electronics,89,22,315663.66,14348.35,4,12,2,2,2,1,2,-70.2,0.225,0.481,0.0,220964.56,27.5,1,0,47689.25,at_risk
+C1315,Arjun Mehta,arjun.mehta79@example.com,2024-01-15,WhatsApp,Sports & Fitness,29,7,18144.65,2592.09,52,105,22,7,11,10,0,71.6,0.089,0.487,5443.4,12701.26,45.6,0,1,42815.76,high_intent
+C1316,Rahul Joshi,rahul.joshi20@example.com,2024-01-15,Email,Sports & Fitness,18,12,33545.79,2795.48,55,33,11,1,21,5,0,27.5,0.052,0.237,10063.74,23482.05,10.7,0,1,78797.18,loyal
+C1317,Riya Kumar,riya.kumar92@example.com,2024-01-15,Email,Electronics,15,33,243748.72,7386.32,17,36,7,0,13,8,2,25.8,0.045,0.347,73124.62,170624.1,5.0,0,1,519094.52,loyal
+C1318,Rohan Rao,rohan.rao39@example.com,2024-01-15,SMS,Beauty & Care,15,37,414004.36,11189.31,42,65,5,3,11,12,0,19.2,0.04,0.279,124201.31,289803.05,7.9,0,1,929850.28,loyal
+C1319,Tanvi Verma,tanvi.verma84@example.com,2024-01-15,WhatsApp,Home & Kitchen,47,1,2980.76,2980.76,8,14,5,0,4,4,1,-11.1,0.039,0.417,0.0,2086.53,76.0,1,0,2831.9,low_active
+C1320,Arjun Sharma,arjun.sharma70@example.com,2024-01-15,Phone,Fashion,7,8,26256.35,3282.04,70,109,17,9,14,10,1,25.6,0.027,0.758,7876.9,18379.44,23.8,0,1,57965.16,high_intent
+C1321,Aarav Joshi,aarav.joshi81@example.com,2024-01-15,WhatsApp,Electronics,1,37,242059.35,6542.14,49,95,7,2,14,15,2,12.9,0.035,0.117,72617.8,169441.54,5.0,0,1,551636.67,loyal
+C1322,Pooja Patel,pooja.patel62@example.com,2024-01-15,Phone,Fashion,8,4,7757.93,1939.48,34,118,16,5,13,8,0,76.0,0.039,0.616,2327.38,5430.55,172.8,0,1,9969.79,high_intent
+C1323,Riya Chawla,riya.chawla92@example.com,2024-01-15,WhatsApp,Home & Kitchen,175,1,1801.75,1801.75,1,0,0,2,2,1,2,-63.4,0.115,0.5,0.0,180.18,592.0,1,0,1000.0,dormant
+C1324,Pooja Gupta,pooja.gupta95@example.com,2024-01-15,WhatsApp,Home & Kitchen,54,1,2987.11,2987.11,7,15,4,3,4,3,2,4.9,0.08,0.419,0.0,2090.98,270.0,1,0,2016.71,low_active
+C1325,Karan Gupta,karan.gupta82@example.com,2024-01-15,Push,Home & Kitchen,16,4,7563.7,1890.93,20,80,15,10,17,17,1,59.4,0.097,0.47,2269.11,5294.59,152.5,0,1,9582.78,high_intent
+C1326,Kabir Singh,kabir.singh27@example.com,2024-01-15,SMS,Beauty & Care,43,3,3726.16,1242.05,8,20,5,0,3,1,1,1.1,0.039,0.335,0.0,2608.31,123.0,1,0,4508.73,low_active
+C1327,Vikram Joshi,vikram.joshi35@example.com,2024-01-15,WhatsApp,Electronics,16,5,7823.29,1564.66,14,5,5,3,8,2,0,4.9,0.102,0.478,2346.99,5476.3,59.8,0,0,14136.79,low_active
+C1328,Riya Mehta,riya.mehta79@example.com,2024-01-15,SMS,Fashion,12,37,277183.61,7491.45,29,100,14,1,22,12,2,10.3,0.079,0.332,83155.08,194028.53,15.7,0,1,359125.3,loyal
+C1329,Rohan Kumar,rohan.kumar56@example.com,2024-01-15,WhatsApp,Fashion,30,4,27892.87,6973.22,68,105,12,7,15,8,0,56.5,0.07,0.436,8367.86,19525.01,136.0,0,1,43594.36,high_intent
+C1330,Ishita Singh,ishita.singh15@example.com,2024-01-15,SMS,Fashion,19,3,3242.91,1080.97,9,12,1,1,6,3,1,9.8,0.1,0.413,972.87,2270.04,84.7,0,0,5876.26,low_active
+C1331,Ishita Chawla,ishita.chawla15@example.com,2024-01-15,Push,Electronics,17,29,182384.03,6289.1,31,99,10,3,20,9,2,14.2,0.035,0.122,54715.21,127668.82,5.0,0,1,348889.59,loyal
+C1332,Rohan Joshi,rohan.joshi42@example.com,2024-01-15,Email,Sports & Fitness,141,2,3215.21,1607.6,1,3,1,2,0,0,3,-74.7,0.129,0.568,0.0,321.52,207.5,1,0,1000.0,dormant
+C1333,Neha Patel,neha.patel19@example.com,2024-01-15,Push,Fashion,7,4,19407.67,4851.92,30,86,11,9,17,12,1,84.4,0.06,0.797,5822.3,13585.37,139.0,0,1,30377.61,high_intent
+C1334,Priya Chawla,priya.chawla96@example.com,2024-01-15,SMS,Fashion,165,1,917.02,917.02,2,3,0,0,0,0,4,-43.5,0.073,0.79,0.0,91.7,520.0,1,0,1000.0,dormant
+C1335,Karan Gupta,karan.gupta27@example.com,2024-01-15,Phone,Electronics,118,12,215106.76,17925.56,1,4,3,3,4,1,6,-31.6,0.261,0.616,0.0,21510.68,56.2,1,0,29122.39,at_risk
+C1336,Karan Sharma,karan.sharma94@example.com,2024-01-15,WhatsApp,Fashion,102,27,118141.95,4375.63,8,9,2,3,3,2,3,-54.9,0.135,0.578,0.0,11814.19,11.9,1,0,29535.49,at_risk
+C1337,Karan Gupta,karan.gupta89@example.com,2024-01-15,Push,Fashion,88,22,430878.22,19585.37,2,5,4,5,1,0,2,-43.0,0.264,0.353,0.0,301614.75,25.1,1,0,71098.8,at_risk
+C1338,Aditya Joshi,aditya.joshi74@example.com,2024-01-15,Email,Sports & Fitness,102,1,2345.51,2345.51,1,4,0,2,2,0,0,-65.6,0.171,0.759,0.0,234.55,459.0,1,0,1000.0,dormant
+C1339,Ishita Gupta,ishita.gupta87@example.com,2024-01-15,WhatsApp,Beauty & Care,17,38,333718.89,8782.08,38,30,18,1,23,10,1,19.0,0.02,0.192,100115.67,233603.22,15.3,0,1,462679.52,loyal
+C1340,Karan Rao,karan.rao22@example.com,2024-01-15,Email,Home & Kitchen,16,26,73388.87,2822.65,20,61,18,2,14,4,2,9.7,0.077,0.237,22016.66,51372.21,17.9,0,1,102739.98,loyal
+C1341,Aarav Rao,aarav.rao76@example.com,2024-01-15,Phone,Electronics,138,3,4094.99,1365.0,0,2,1,1,0,0,3,-74.4,0.151,0.564,0.0,409.5,50.0,1,0,1023.75,dormant
+C1342,Karan Mehta,karan.mehta43@example.com,2024-01-15,SMS,Sports & Fitness,12,29,304799.54,10510.33,58,75,11,3,25,12,1,12.6,0.053,0.263,91439.86,213359.68,19.9,0,1,431296.32,loyal
+C1343,Neha Singh,neha.singh81@example.com,2024-01-15,SMS,Home & Kitchen,10,34,111073.59,3266.87,60,75,9,0,15,11,2,32.3,0.042,0.115,33322.08,77751.51,17.6,0,1,161750.51,loyal
+C1344,Neha Verma,neha.verma37@example.com,2024-01-15,SMS,Home & Kitchen,192,3,1846.68,615.56,2,0,0,1,2,0,0,-55.2,0.247,0.444,0.0,184.67,183.3,1,0,1000.0,dormant
+C1345,Vikram Chawla,vikram.chawla86@example.com,2024-01-15,WhatsApp,Electronics,9,26,104450.11,4017.31,38,35,6,3,20,13,2,15.6,0.017,0.273,31335.03,73115.08,18.3,0,1,170269.35,loyal
+C1346,Varun Mehta,varun.mehta86@example.com,2024-01-15,Email,Beauty & Care,15,12,106413.32,8867.78,27,91,14,1,9,13,2,39.9,0.067,0.254,31924.0,74489.32,7.3,0,1,242261.8,loyal
+C1347,Varun Patel,varun.patel88@example.com,2024-01-15,WhatsApp,Home & Kitchen,75,28,380974.42,13606.23,1,4,1,4,3,1,7,-48.6,0.185,0.352,0.0,266682.09,7.2,1,0,95243.6,at_risk
+C1348,Arjun Kumar,arjun.kumar85@example.com,2024-01-15,Phone,Electronics,184,3,4198.71,1399.57,0,0,1,2,2,1,2,-80.3,0.124,0.548,0.0,419.87,78.3,1,0,1049.68,dormant
+C1349,Kabir Patel,kabir.patel87@example.com,2024-01-15,SMS,Beauty & Care,51,1,2413.95,2413.95,8,10,4,0,6,1,2,8.1,0.031,0.325,0.0,1689.76,229.0,1,0,2476.25,low_active
+C1350,Meera Singh,meera.singh24@example.com,2024-01-15,Push,Sports & Fitness,29,6,9748.5,1624.75,64,96,20,8,25,18,0,38.2,0.081,0.455,2924.55,6823.95,92.5,0,1,14233.02,high_intent
+C1351,Rahul Chawla,rahul.chawla97@example.com,2024-01-15,Phone,Electronics,18,3,8696.44,2898.81,36,48,20,9,17,16,0,20.8,0.039,0.79,2608.93,6087.51,167.0,0,1,12131.77,high_intent
+C1352,Rahul Kumar,rahul.kumar55@example.com,2024-01-15,Phone,Electronics,59,3,8733.21,2911.07,7,14,1,3,7,3,0,-0.4,0.04,0.364,0.0,6113.25,186.0,1,0,4348.79,low_active
+C1353,Riya Gupta,riya.gupta70@example.com,2024-01-15,Push,Fashion,21,6,41929.93,6988.32,31,64,23,9,16,9,0,26.9,0.059,0.46,12578.98,29350.95,58.5,0,1,77063.25,high_intent
+C1354,Kabir Patel,kabir.patel39@example.com,2024-01-15,Email,Sports & Fitness,90,12,186420.84,15535.07,2,3,1,5,4,0,6,-51.2,0.175,0.458,0.0,130494.59,19.8,1,0,46605.21,at_risk
+C1355,Ananya Chawla,ananya.chawla57@example.com,2024-01-15,Push,Beauty & Care,21,6,39615.65,6602.61,51,63,24,6,22,9,0,82.4,0.096,0.715,11884.69,27730.95,110.8,0,1,52824.71,high_intent
+C1356,Ananya Joshi,ananya.joshi64@example.com,2024-01-15,Phone,Electronics,109,19,279267.51,14698.29,7,12,2,5,0,2,6,-53.1,0.151,0.636,0.0,27926.75,27.3,1,0,49100.5,at_risk
+C1357,Siddharth Singh,siddharth.singh98@example.com,2024-01-15,WhatsApp,Fashion,13,18,247896.45,13772.02,35,71,13,1,25,8,0,21.2,0.055,0.265,74368.93,173527.51,5.0,0,1,567699.64,loyal
+C1358,Kabir Chawla,kabir.chawla88@example.com,2024-01-15,Push,Fashion,153,2,3546.68,1773.34,0,3,1,1,1,1,3,-59.3,0.063,0.611,0.0,354.67,190.5,1,0,1000.0,dormant
+C1359,Neha Rao,neha.rao26@example.com,2024-01-15,Email,Electronics,9,27,316383.9,11717.92,50,80,17,1,12,15,0,22.9,0.058,0.11,94915.17,221468.73,22.9,0,1,444754.74,loyal
+C1360,Ishita Sharma,ishita.sharma32@example.com,2024-01-15,SMS,Fashion,17,32,366529.36,11454.04,46,63,13,0,20,5,2,7.5,0.015,0.103,109958.81,256570.55,14.4,0,1,608687.58,loyal
+C1361,Neha Sharma,neha.sharma37@example.com,2024-01-15,SMS,Electronics,147,3,5925.05,1975.02,1,2,1,1,2,1,2,-72.3,0.109,0.51,0.0,592.5,96.7,1,0,1481.26,dormant
+C1362,Aarav Kumar,aarav.kumar25@example.com,2024-01-15,Phone,Fashion,51,5,11275.08,2255.02,14,10,3,2,4,4,2,-9.4,0.046,0.23,0.0,7892.56,77.8,1,0,7069.93,low_active
+C1363,Siddharth Verma,siddharth.verma58@example.com,2024-01-15,Push,Beauty & Care,55,2,4963.24,2481.62,6,15,4,3,8,1,0,-7.0,0.032,0.225,0.0,3474.27,329.0,1,0,1924.45,low_active
+C1364,Neha Singh,neha.singh39@example.com,2024-01-15,Push,Home & Kitchen,180,2,2181.78,1090.89,2,3,1,1,1,1,3,-51.5,0.175,0.529,0.0,218.18,175.5,1,0,1000.0,dormant
+C1365,Neha Gupta,neha.gupta12@example.com,2024-01-15,Email,Home & Kitchen,3,25,100433.26,4017.33,25,75,8,0,10,11,2,26.5,0.064,0.261,30129.98,70303.28,6.3,0,1,230405.05,loyal
+C1366,Ananya Sharma,ananya.sharma60@example.com,2024-01-15,WhatsApp,Electronics,11,4,7090.73,1772.68,25,89,17,5,17,17,1,87.8,0.084,0.517,2127.22,4963.51,141.5,0,1,11124.24,high_intent
+C1367,Siddharth Gupta,siddharth.gupta26@example.com,2024-01-15,Email,Electronics,94,3,5111.29,1703.76,1,2,1,1,2,1,4,-60.9,0.2,0.787,0.0,511.13,189.7,1,0,1000.0,dormant
+C1368,Siddharth Gupta,siddharth.gupta99@example.com,2024-01-15,Email,Sports & Fitness,53,4,4327.24,1081.81,14,18,5,2,4,4,2,-4.9,0.114,0.267,0.0,3029.07,145.5,1,0,1905.02,low_active
+C1369,Sanya Verma,sanya.verma66@example.com,2024-01-15,Push,Beauty & Care,78,12,124143.68,10345.31,5,2,1,6,1,1,4,-53.0,0.223,0.677,0.0,86900.58,28.8,1,0,31035.92,at_risk
+C1370,Ishita Joshi,ishita.joshi11@example.com,2024-01-15,SMS,Home & Kitchen,1,39,156731.92,4018.77,33,54,5,2,14,10,2,11.9,0.072,0.261,47019.58,109712.34,13.7,0,1,232875.0,loyal
+C1371,Kavya Kumar,kavya.kumar41@example.com,2024-01-15,SMS,Beauty & Care,73,16,269937.57,16871.1,2,8,2,6,4,2,7,-31.9,0.269,0.668,0.0,188956.3,12.3,1,0,67484.39,at_risk
+C1372,Kabir Mehta,kabir.mehta93@example.com,2024-01-15,Push,Beauty & Care,69,10,158357.13,15835.71,3,4,3,2,3,2,5,-52.0,0.268,0.591,0.0,110849.99,57.4,1,0,25174.37,at_risk
+C1373,Kabir Rao,kabir.rao72@example.com,2024-01-15,Push,Electronics,24,1,2243.56,2243.56,12,5,2,0,4,3,0,-9.7,0.079,0.495,673.07,1570.49,222.0,0,0,3709.91,low_active
+C1374,Siddharth Sharma,siddharth.sharma39@example.com,2024-01-15,Email,Electronics,153,1,586.35,586.35,1,3,1,1,1,1,0,-81.8,0.076,0.736,0.0,58.64,122.0,1,0,1000.0,dormant
+C1375,Rahul Verma,rahul.verma28@example.com,2024-01-15,Push,Beauty & Care,19,5,6348.63,1269.73,11,10,2,2,8,4,0,0.2,0.106,0.42,1904.59,4444.04,17.4,0,0,11086.64,low_active
+C1376,Priya Patel,priya.patel59@example.com,2024-01-15,Email,Electronics,9,9,48035.34,5337.26,67,52,24,9,16,13,1,55.6,0.044,0.626,14410.6,33624.74,53.7,0,1,85799.65,high_intent
+C1377,Meera Singh,meera.singh30@example.com,2024-01-15,WhatsApp,Sports & Fitness,48,1,2721.31,2721.31,8,20,3,1,4,1,2,4.1,0.099,0.248,0.0,1904.92,674.0,1,0,1367.37,low_active
+C1378,Aditya Verma,aditya.verma40@example.com,2024-01-15,SMS,Home & Kitchen,3,4,6242.62,1560.66,70,75,11,7,17,6,0,37.3,0.078,0.797,1872.79,4369.83,169.5,0,1,7996.8,high_intent
+C1379,Karan Chawla,karan.chawla98@example.com,2024-01-15,Email,Home & Kitchen,3,27,203004.33,7518.68,25,88,7,2,9,4,1,33.0,0.024,0.239,60901.3,142103.03,23.7,0,1,265696.91,loyal
+C1380,Vikram Joshi,vikram.joshi23@example.com,2024-01-15,SMS,Fashion,35,5,10775.84,2155.17,14,16,4,1,2,4,1,-9.4,0.062,0.435,0.0,7543.09,31.6,1,0,13161.55,low_active
+C1381,Vikram Mehta,vikram.mehta15@example.com,2024-01-15,SMS,Sports & Fitness,12,10,15339.92,1533.99,64,102,14,8,15,14,1,73.3,0.023,0.698,4601.98,10737.94,52.6,0,1,25742.15,high_intent
+C1382,Rahul Chawla,rahul.chawla45@example.com,2024-01-15,Phone,Fashion,3,45,651416.33,14475.92,24,82,14,2,25,9,1,17.9,0.033,0.137,195424.9,455991.43,14.3,0,1,818196.99,loyal
+C1383,Aarav Joshi,aarav.joshi58@example.com,2024-01-15,WhatsApp,Sports & Fitness,91,27,483382.7,17903.06,4,7,1,6,3,0,6,-25.2,0.174,0.479,0.0,48338.27,8.1,1,0,120845.68,at_risk
+C1384,Ishita Joshi,ishita.joshi29@example.com,2024-01-15,Push,Home & Kitchen,41,3,8248.89,2749.63,5,8,5,0,2,2,0,2.8,0.065,0.324,0.0,5774.22,219.0,0,0,6549.71,low_active
+C1385,Ananya Patel,ananya.patel23@example.com,2024-01-15,Email,Electronics,17,5,4035.4,807.08,14,17,4,2,2,3,0,3.6,0.062,0.438,1210.62,2824.78,105.4,0,0,5179.54,low_active
+C1386,Tanvi Verma,tanvi.verma11@example.com,2024-01-15,SMS,Electronics,15,15,147787.93,9852.53,38,96,18,2,9,13,1,21.8,0.055,0.116,44336.38,103451.55,16.2,0,1,329162.61,loyal
+C1387,Varun Sharma,varun.sharma19@example.com,2024-01-15,WhatsApp,Fashion,19,3,15448.95,5149.65,26,69,25,7,16,9,0,59.2,0.068,0.671,4634.69,10814.26,113.7,0,1,34980.81,high_intent
+C1388,Karan Gupta,karan.gupta81@example.com,2024-01-15,SMS,Electronics,55,5,6968.03,1393.61,9,19,4,0,3,2,2,9.8,0.075,0.223,0.0,4877.62,120.2,1,0,4214.09,low_active
+C1389,Arjun Joshi,arjun.joshi53@example.com,2024-01-15,Phone,Sports & Fitness,15,34,227051.29,6677.98,35,95,15,2,21,14,1,32.5,0.06,0.297,68115.39,158935.9,5.6,0,1,519506.33,loyal
+C1390,Rahul Rao,rahul.rao40@example.com,2024-01-15,Phone,Fashion,15,10,43612.93,4361.29,67,72,19,7,24,12,0,30.3,0.046,0.574,13083.88,30529.05,60.6,0,1,60282.15,high_intent
+C1391,Ananya Mehta,ananya.mehta86@example.com,2024-01-15,Phone,Fashion,10,12,63091.79,5257.65,34,53,11,2,8,15,1,25.9,0.061,0.35,18927.54,44164.25,5.0,0,1,144098.3,loyal
+C1392,Riya Joshi,riya.joshi81@example.com,2024-01-15,Phone,Fashion,102,1,1785.13,1785.13,1,2,0,0,1,1,4,-68.9,0.177,0.771,0.0,178.51,614.0,1,0,1000.0,dormant
+C1393,Sanya Patel,sanya.patel42@example.com,2024-01-15,WhatsApp,Sports & Fitness,13,25,190595.28,7623.81,19,66,20,1,23,15,2,34.4,0.037,0.243,57178.58,133416.7,13.5,0,1,424818.59,loyal
+C1394,Karan Verma,karan.verma86@example.com,2024-01-15,Push,Electronics,26,8,21592.77,2699.1,25,47,18,6,23,12,0,45.4,0.047,0.41,6477.83,15114.94,85.9,0,1,24579.42,high_intent
+C1395,Sanya Rao,sanya.rao11@example.com,2024-01-15,SMS,Electronics,10,45,580329.59,12896.21,17,65,9,2,24,15,0,14.6,0.046,0.175,174098.88,406230.71,15.1,0,1,680762.38,loyal
+C1396,Vikram Sharma,vikram.sharma96@example.com,2024-01-15,SMS,Sports & Fitness,163,3,3055.78,1018.59,0,1,1,1,1,0,1,-68.5,0.225,0.805,0.0,305.58,144.0,1,0,1000.0,dormant
+C1397,Rahul Verma,rahul.verma70@example.com,2024-01-15,WhatsApp,Sports & Fitness,13,28,350925.16,12533.04,20,76,18,1,12,11,2,21.0,0.044,0.133,105277.55,245647.61,22.0,0,1,436520.09,loyal
+C1398,Aditya Chawla,aditya.chawla60@example.com,2024-01-15,Phone,Fashion,18,45,521965.86,11599.24,30,56,7,2,21,9,2,22.4,0.041,0.282,156589.76,365376.1,15.5,0,1,560842.84,loyal
+C1399,Karan Verma,karan.verma24@example.com,2024-01-15,SMS,Home & Kitchen,37,2,2299.2,1149.6,9,16,5,0,8,3,0,3.3,0.042,0.425,0.0,1609.44,226.5,0,0,2930.7,low_active
+C1400,Pooja Rao,pooja.rao66@example.com,2024-01-15,Email,Beauty & Care,17,2,5809.1,2904.55,7,16,2,0,2,1,0,-12.9,0.035,0.285,1742.73,4066.37,334.0,0,0,5261.78,low_active
+C1401,Tanvi Gupta,tanvi.gupta46@example.com,2024-01-15,Push,Electronics,84,22,158370.07,7198.64,8,2,3,3,4,0,3,-29.7,0.15,0.409,0.0,110859.05,5.0,1,0,39592.52,at_risk
+C1402,Riya Joshi,riya.joshi43@example.com,2024-01-15,SMS,Sports & Fitness,24,1,1789.43,1789.43,10,6,3,1,2,3,0,8.3,0.036,0.346,536.83,1252.6,591.0,0,0,2030.12,low_active
+C1403,Tanvi Mehta,tanvi.mehta16@example.com,2024-01-15,WhatsApp,Electronics,13,29,95211.79,3283.17,57,71,8,0,17,14,1,36.7,0.02,0.233,28563.54,66648.25,17.4,0,1,165691.44,loyal
+C1404,Sanya Kumar,sanya.kumar75@example.com,2024-01-15,Push,Beauty & Care,113,10,89048.37,8904.84,3,5,4,6,0,0,3,-30.0,0.104,0.566,0.0,8904.84,13.1,1,0,22262.09,at_risk
+C1405,Varun Mehta,varun.mehta52@example.com,2024-01-15,SMS,Fashion,92,2,3240.67,1620.34,2,2,1,2,1,0,4,-43.2,0.06,0.551,0.0,324.07,265.5,1,0,1000.0,dormant
+C1406,Kabir Sharma,kabir.sharma90@example.com,2024-01-15,SMS,Electronics,116,16,246783.3,15423.96,4,4,3,5,1,0,7,-25.9,0.151,0.562,0.0,24678.33,18.3,1,0,61695.83,at_risk
+C1407,Arjun Joshi,arjun.joshi96@example.com,2024-01-15,Email,Beauty & Care,8,21,200899.19,9566.63,42,64,15,3,25,6,0,21.2,0.078,0.252,60269.76,140629.43,31.3,0,1,255110.2,loyal
+C1408,Vikram Rao,vikram.rao79@example.com,2024-01-15,Email,Home & Kitchen,112,12,59275.54,4939.63,7,4,2,4,0,2,6,-67.4,0.145,0.4,0.0,5927.55,19.8,1,0,14818.89,at_risk
+C1409,Priya Gupta,priya.gupta50@example.com,2024-01-15,WhatsApp,Home & Kitchen,142,2,3244.89,1622.45,1,3,1,0,0,0,1,-63.8,0.073,0.816,0.0,324.49,89.5,1,0,1000.0,dormant
+C1410,Neha Sharma,neha.sharma88@example.com,2024-01-15,Push,Sports & Fitness,51,5,4744.35,948.87,7,12,2,0,4,1,2,6.2,0.079,0.225,0.0,3321.05,132.2,1,0,2568.91,low_active
+C1411,Ishita Gupta,ishita.gupta74@example.com,2024-01-15,SMS,Home & Kitchen,8,8,37204.21,4650.53,51,100,12,5,16,9,0,31.6,0.096,0.74,11161.26,26042.95,81.1,0,1,48753.42,high_intent
+C1412,Kavya Sharma,kavya.sharma44@example.com,2024-01-15,Email,Fashion,28,1,1817.05,1817.05,6,19,5,3,7,3,1,-2.6,0.089,0.364,545.12,1271.93,452.0,1,0,1761.35,low_active
+C1413,Sanya Kumar,sanya.kumar61@example.com,2024-01-15,Phone,Beauty & Care,11,37,329532.48,8906.28,54,98,6,0,22,11,0,33.2,0.042,0.113,98859.74,230672.74,5.0,0,1,797525.39,loyal
+C1414,Sanya Joshi,sanya.joshi78@example.com,2024-01-15,WhatsApp,Sports & Fitness,39,5,6215.0,1243.0,14,6,2,2,5,4,1,-7.2,0.045,0.299,0.0,4350.5,87.0,1,0,5636.73,low_active
+C1415,Meera Chawla,meera.chawla31@example.com,2024-01-15,Push,Sports & Fitness,18,5,9713.24,1942.65,6,19,4,0,7,1,0,-8.9,0.109,0.464,2913.97,6799.27,92.4,0,0,13006.38,low_active
+C1416,Karan Joshi,karan.joshi27@example.com,2024-01-15,SMS,Home & Kitchen,147,1,977.59,977.59,0,3,0,1,0,1,2,-67.4,0.247,0.763,0.0,97.76,432.0,1,0,1000.0,dormant
+C1417,Neha Verma,neha.verma21@example.com,2024-01-15,SMS,Home & Kitchen,3,45,149177.58,3315.06,60,74,10,3,25,10,0,21.2,0.074,0.235,44753.27,104424.31,5.0,0,1,354953.2,loyal
+C1418,Neha Singh,neha.singh82@example.com,2024-01-15,Email,Fashion,8,2,4371.16,2185.58,46,79,17,9,24,10,0,66.0,0.086,0.552,1311.35,3059.81,91.5,0,1,10394.23,high_intent
+C1419,Priya Gupta,priya.gupta35@example.com,2024-01-15,Phone,Home & Kitchen,15,4,11687.39,2921.85,11,20,5,0,6,4,0,-8.9,0.077,0.286,3506.22,8181.17,8.2,0,0,21408.52,low_active
+C1420,Aditya Rao,aditya.rao94@example.com,2024-01-15,SMS,Beauty & Care,43,1,2070.71,2070.71,13,5,2,2,6,2,0,4.0,0.102,0.319,0.0,1449.5,517.0,0,0,1933.37,low_active
+C1421,Neha Gupta,neha.gupta17@example.com,2024-01-15,Push,Electronics,108,1,1566.06,1566.06,2,4,1,1,0,0,0,-82.1,0.189,0.776,0.0,156.61,698.0,1,0,1000.0,dormant
+C1422,Kavya Gupta,kavya.gupta30@example.com,2024-01-15,Phone,Sports & Fitness,118,25,439301.18,17572.05,3,9,3,2,0,1,4,-29.7,0.155,0.693,0.0,43930.12,12.8,1,0,109825.29,at_risk
+C1423,Pooja Kumar,pooja.kumar18@example.com,2024-01-15,Phone,Electronics,10,42,211058.23,5025.2,23,40,13,2,24,10,2,11.4,0.073,0.264,63317.47,147740.76,11.1,0,1,327730.21,loyal
+C1424,Aditya Patel,aditya.patel88@example.com,2024-01-15,WhatsApp,Sports & Fitness,17,17,136068.73,8004.04,45,61,18,2,16,12,2,26.5,0.016,0.321,40820.62,95248.11,5.2,0,1,301066.17,loyal
+C1425,Tanvi Singh,tanvi.singh26@example.com,2024-01-15,Phone,Beauty & Care,48,4,7645.82,1911.45,11,10,5,1,7,3,0,14.0,0.068,0.495,0.0,5352.07,164.8,0,0,6262.82,low_active
+C1426,Aarav Verma,aarav.verma13@example.com,2024-01-15,WhatsApp,Fashion,54,4,8785.11,2196.28,10,6,3,2,6,2,0,-10.0,0.109,0.328,0.0,6149.58,126.5,1,0,5080.47,low_active
+C1427,Aditya Mehta,aditya.mehta42@example.com,2024-01-15,Push,Home & Kitchen,17,32,85043.01,2657.59,15,39,15,2,20,15,2,24.6,0.047,0.28,25512.9,59530.11,5.0,0,1,171973.79,loyal
+C1428,Tanvi Sharma,tanvi.sharma32@example.com,2024-01-15,Push,Home & Kitchen,176,2,1317.63,658.81,1,0,0,1,0,1,4,-53.4,0.087,0.815,0.0,131.76,114.0,1,0,1000.0,dormant
+C1429,Rahul Chawla,rahul.chawla62@example.com,2024-01-15,Phone,Home & Kitchen,51,3,5969.24,1989.75,12,5,2,2,8,3,0,6.3,0.058,0.341,0.0,4178.47,29.0,1,0,7104.48,low_active
+C1430,Vikram Mehta,vikram.mehta13@example.com,2024-01-15,SMS,Sports & Fitness,25,5,9051.92,1810.38,13,17,2,0,8,3,2,-4.3,0.074,0.448,2715.58,6336.34,75.4,0,0,12676.77,low_active
+C1431,Rahul Sharma,rahul.sharma44@example.com,2024-01-15,WhatsApp,Beauty & Care,75,19,113124.99,5953.95,8,6,2,6,2,0,2,-39.4,0.265,0.34,0.0,79187.49,23.8,1,0,22787.32,at_risk
+C1432,Pooja Sharma,pooja.sharma35@example.com,2024-01-15,SMS,Sports & Fitness,1,42,179535.29,4274.65,47,44,11,2,23,15,2,17.2,0.042,0.287,53860.59,125674.7,5.0,0,1,412197.37,loyal
+C1433,Meera Singh,meera.singh28@example.com,2024-01-15,Phone,Fashion,28,1,2166.04,2166.04,11,17,5,0,2,3,0,-4.4,0.106,0.341,649.81,1516.23,130.0,0,0,3578.63,low_active
+C1434,Tanvi Verma,tanvi.verma52@example.com,2024-01-15,WhatsApp,Electronics,156,3,5304.85,1768.28,2,2,0,2,1,0,2,-83.7,0.185,0.495,0.0,530.49,169.3,1,0,1000.0,dormant
+C1435,Aditya Patel,aditya.patel46@example.com,2024-01-15,Phone,Home & Kitchen,43,1,953.21,953.21,8,9,2,2,2,1,2,-9.8,0.107,0.268,0.0,667.25,313.0,1,0,1000.0,low_active
+C1436,Riya Joshi,riya.joshi23@example.com,2024-01-15,Phone,Home & Kitchen,50,3,4243.22,1414.41,8,9,3,1,3,1,1,4.3,0.092,0.354,0.0,2970.25,80.3,1,0,4407.3,low_active
+C1437,Tanvi Singh,tanvi.singh79@example.com,2024-01-15,WhatsApp,Fashion,48,23,152143.95,6614.95,1,3,4,2,0,1,5,-73.3,0.161,0.561,0.0,106500.76,21.0,1,0,28684.16,at_risk
+C1438,Neha Rao,neha.rao85@example.com,2024-01-15,SMS,Sports & Fitness,135,2,4484.82,2242.41,1,1,0,1,2,0,0,-51.7,0.208,0.699,0.0,448.48,337.0,1,0,1000.0,dormant
+C1439,Siddharth Verma,siddharth.verma68@example.com,2024-01-15,SMS,Beauty & Care,74,15,276334.73,18422.32,3,11,3,4,3,0,7,-41.5,0.212,0.344,0.0,193434.31,23.1,1,0,69083.68,at_risk
+C1440,Rahul Singh,rahul.singh68@example.com,2024-01-15,WhatsApp,Electronics,105,11,119087.0,10826.09,6,9,4,3,2,1,6,-31.8,0.209,0.452,0.0,11908.7,48.1,1,0,20541.94,at_risk
+C1441,Karan Gupta,karan.gupta75@example.com,2024-01-15,SMS,Electronics,131,3,2164.32,721.44,2,0,1,2,1,1,4,-68.9,0.058,0.744,0.0,216.43,45.0,1,0,1000.0,dormant
+C1442,Kavya Patel,kavya.patel89@example.com,2024-01-15,Phone,Fashion,151,2,2120.15,1060.07,0,2,0,2,2,1,3,-47.1,0.108,0.846,0.0,212.02,139.5,1,0,1000.0,dormant
+C1443,Karan Singh,karan.singh79@example.com,2024-01-15,Email,Electronics,60,5,12853.97,2570.79,11,8,5,3,4,1,1,-14.5,0.117,0.418,0.0,8997.78,54.2,1,0,5892.03,low_active
+C1444,Neha Mehta,neha.mehta61@example.com,2024-01-15,Phone,Electronics,93,18,307794.77,17099.71,8,12,1,2,1,0,6,-60.9,0.275,0.345,0.0,30779.48,5.6,1,0,76948.69,at_risk
+C1445,Aarav Gupta,aarav.gupta94@example.com,2024-01-15,SMS,Sports & Fitness,33,4,7958.15,1989.54,13,19,2,1,7,3,1,-12.1,0.052,0.204,0.0,5570.7,45.5,1,0,9460.05,low_active
+C1446,Karan Mehta,karan.mehta65@example.com,2024-01-15,WhatsApp,Sports & Fitness,3,10,34582.24,3458.22,45,56,17,4,21,20,0,61.9,0.044,0.52,10374.67,24207.57,38.2,0,1,81049.93,high_intent
+C1447,Aarav Joshi,aarav.joshi55@example.com,2024-01-15,Push,Electronics,30,4,3623.66,905.91,15,17,3,3,5,4,1,12.1,0.107,0.4,1087.1,2536.56,35.5,0,0,5623.2,low_active
+C1448,Riya Patel,riya.patel94@example.com,2024-01-15,SMS,Fashion,9,10,72999.66,7299.97,44,86,21,5,19,19,0,33.0,0.026,0.496,21899.9,51099.76,20.7,0,1,170835.17,high_intent
+C1449,Vikram Sharma,vikram.sharma19@example.com,2024-01-15,WhatsApp,Fashion,46,4,3505.1,876.27,6,7,2,3,8,4,2,2.5,0.12,0.457,0.0,2453.57,173.2,1,0,1445.24,low_active
+C1450,Tanvi Kumar,tanvi.kumar89@example.com,2024-01-15,SMS,Sports & Fitness,16,10,19136.66,1913.67,48,89,19,5,15,12,0,78.2,0.068,0.446,5741.0,13395.66,21.4,0,1,46727.11,high_intent
+C1451,Karan Chawla,karan.chawla40@example.com,2024-01-15,Push,Beauty & Care,18,35,485461.73,13870.34,17,29,20,2,11,13,1,28.4,0.068,0.32,145638.52,339823.21,15.5,0,1,697343.18,loyal
+C1452,Rohan Gupta,rohan.gupta77@example.com,2024-01-15,SMS,Sports & Fitness,5,10,48634.01,4863.4,59,51,15,7,30,17,0,50.1,0.045,0.574,14590.2,34043.81,31.6,0,1,117255.5,high_intent
+C1453,Riya Rao,riya.rao49@example.com,2024-01-15,WhatsApp,Home & Kitchen,49,1,2124.23,2124.23,11,19,5,3,6,3,1,11.8,0.07,0.382,0.0,1486.96,657.0,1,0,1268.73,low_active
+C1454,Pooja Mehta,pooja.mehta47@example.com,2024-01-15,WhatsApp,Sports & Fitness,26,6,32076.19,5346.03,66,112,16,4,30,13,0,69.2,0.039,0.605,9622.86,22453.33,33.5,0,1,78150.17,high_intent
+C1455,Karan Sharma,karan.sharma94@example.com,2024-01-15,Phone,Electronics,10,43,314174.84,7306.39,20,41,7,2,16,6,2,22.1,0.056,0.338,94252.45,219922.39,7.6,0,1,645869.73,loyal
+C1456,Kabir Mehta,kabir.mehta42@example.com,2024-01-15,WhatsApp,Sports & Fitness,8,4,25333.44,6333.36,62,97,19,10,15,10,0,55.4,0.071,0.428,7600.03,17733.41,11.0,0,1,59781.5,high_intent
+C1457,Ishita Gupta,ishita.gupta77@example.com,2024-01-15,Push,Electronics,63,27,247090.57,9151.5,3,9,4,5,1,2,5,-51.4,0.109,0.356,0.0,172963.4,5.0,1,0,61772.64,at_risk
+C1458,Neha Patel,neha.patel83@example.com,2024-01-15,WhatsApp,Home & Kitchen,59,9,175644.5,19516.06,3,9,4,5,2,1,7,-58.4,0.196,0.378,0.0,122951.15,42.6,1,0,41847.42,at_risk
+C1459,Riya Patel,riya.patel58@example.com,2024-01-15,SMS,Home & Kitchen,7,10,33244.41,3324.44,47,41,17,10,24,12,1,34.5,0.061,0.402,9973.32,23271.09,42.9,0,1,59970.16,high_intent
+C1460,Varun Sharma,varun.sharma22@example.com,2024-01-15,Push,Beauty & Care,20,29,151912.44,5238.36,36,59,13,0,16,14,2,6.3,0.018,0.185,45573.73,106338.71,19.8,0,1,197029.31,loyal
+C1461,Arjun Chawla,arjun.chawla96@example.com,2024-01-15,Phone,Fashion,48,3,6175.52,2058.51,14,10,3,0,7,1,0,0.4,0.056,0.48,0.0,4322.86,92.3,0,0,8225.84,low_active
+C1462,Aarav Kumar,aarav.kumar22@example.com,2024-01-15,WhatsApp,Beauty & Care,89,15,67208.66,4480.58,5,6,2,2,0,2,2,-44.1,0.123,0.438,0.0,47046.06,37.8,1,0,10816.21,at_risk
+C1463,Ananya Rao,ananya.rao94@example.com,2024-01-15,Phone,Electronics,25,3,21547.34,7182.45,25,117,12,7,30,15,0,54.5,0.076,0.797,6464.2,15083.14,84.0,0,1,47511.55,high_intent
+C1464,Priya Gupta,priya.gupta42@example.com,2024-01-15,SMS,Electronics,15,29,172090.18,5934.14,42,66,13,1,10,8,0,18.8,0.04,0.203,51627.05,120463.13,11.4,0,1,394090.0,loyal
+C1465,Arjun Kumar,arjun.kumar52@example.com,2024-01-15,Push,Home & Kitchen,112,2,3856.13,1928.07,0,3,0,2,1,0,3,-59.6,0.112,0.794,0.0,385.61,45.5,1,0,1000.0,dormant
+C1466,Priya Gupta,priya.gupta79@example.com,2024-01-15,Email,Sports & Fitness,172,1,2142.4,2142.4,1,2,0,0,0,0,4,-89.9,0.177,0.331,0.0,214.24,471.0,1,0,1000.0,dormant
+C1467,Kabir Chawla,kabir.chawla12@example.com,2024-01-15,Email,Electronics,49,29,116345.68,4011.92,7,6,2,4,3,2,2,-44.8,0.237,0.346,0.0,81441.98,18.6,1,0,19696.74,at_risk
+C1468,Varun Chawla,varun.chawla71@example.com,2024-01-15,SMS,Electronics,114,15,161340.31,10756.02,1,8,4,2,4,2,4,-56.5,0.124,0.468,0.0,16134.03,31.7,1,0,30929.21,at_risk
+C1469,Rahul Mehta,rahul.mehta61@example.com,2024-01-15,WhatsApp,Home & Kitchen,49,3,2868.65,956.22,5,19,3,1,3,1,1,-12.6,0.062,0.483,0.0,2008.05,28.7,1,0,2113.22,low_active
+C1470,Aditya Mehta,aditya.mehta99@example.com,2024-01-15,WhatsApp,Home & Kitchen,46,1,2293.07,2293.07,14,19,2,1,2,2,0,-4.1,0.083,0.203,0.0,1605.15,429.0,1,0,2360.38,low_active
+C1471,Karan Patel,karan.patel72@example.com,2024-01-15,WhatsApp,Sports & Fitness,23,6,44618.19,7436.37,51,108,22,4,11,11,0,62.9,0.09,0.69,13385.46,31232.73,71.3,0,1,91476.58,high_intent
+C1472,Rahul Sharma,rahul.sharma61@example.com,2024-01-15,Email,Sports & Fitness,15,21,289393.99,13780.67,52,54,7,0,12,11,2,7.3,0.047,0.136,86818.2,202575.79,7.2,0,1,633747.81,loyal
+C1473,Aarav Chawla,aarav.chawla89@example.com,2024-01-15,Email,Fashion,1,23,178834.85,7775.43,55,31,14,0,22,13,0,15.3,0.044,0.244,53650.46,125184.39,5.0,0,1,430948.81,loyal
+C1474,Karan Verma,karan.verma23@example.com,2024-01-15,SMS,Sports & Fitness,20,26,104976.07,4037.54,19,50,18,2,20,9,0,24.6,0.034,0.282,31492.82,73483.25,5.6,0,1,225103.19,loyal
+C1475,Karan Joshi,karan.joshi27@example.com,2024-01-15,Email,Electronics,52,2,5320.66,2660.33,9,7,1,2,3,4,0,5.8,0.069,0.402,0.0,3724.46,179.5,1,0,6031.58,low_active
+C1476,Pooja Joshi,pooja.joshi31@example.com,2024-01-15,Email,Sports & Fitness,50,12,98487.95,8207.33,2,12,4,3,0,1,2,-35.6,0.189,0.619,0.0,68941.56,39.9,1,0,18762.06,at_risk
+C1477,Aarav Sharma,aarav.sharma32@example.com,2024-01-15,Phone,Home & Kitchen,41,4,10746.55,2686.64,15,9,2,1,7,3,2,12.5,0.069,0.296,0.0,7522.58,30.2,0,0,14438.6,low_active
+C1478,Siddharth Kumar,siddharth.kumar40@example.com,2024-01-15,Phone,Electronics,22,4,15650.48,3912.62,65,103,10,9,19,11,1,62.1,0.076,0.675,4695.14,10955.34,52.0,0,1,36191.6,high_intent
+C1479,Aarav Joshi,aarav.joshi40@example.com,2024-01-15,WhatsApp,Sports & Fitness,57,27,157588.83,5836.62,6,10,2,5,1,1,2,-53.5,0.129,0.656,0.0,110312.18,8.4,1,0,39397.21,at_risk
+C1480,Aditya Verma,aditya.verma29@example.com,2024-01-15,SMS,Fashion,65,29,163148.66,5625.82,1,2,3,4,1,1,4,-73.7,0.229,0.555,0.0,114204.06,17.8,1,0,28907.41,at_risk
+C1481,Rahul Rao,rahul.rao68@example.com,2024-01-15,WhatsApp,Electronics,113,13,54848.33,4219.1,3,2,4,6,0,0,3,-54.5,0.162,0.571,0.0,5484.83,5.7,1,0,13712.08,at_risk
+C1482,Siddharth Rao,siddharth.rao84@example.com,2024-01-15,SMS,Fashion,26,7,27089.01,3869.86,34,54,18,5,13,9,1,35.3,0.099,0.582,8126.7,18962.31,51.9,0,1,55444.53,high_intent
+C1483,Aditya Kumar,aditya.kumar38@example.com,2024-01-15,SMS,Sports & Fitness,46,1,1109.22,1109.22,10,9,2,3,3,4,1,-0.4,0.032,0.352,0.0,776.45,105.0,1,0,1019.09,low_active
+C1484,Vikram Chawla,vikram.chawla34@example.com,2024-01-15,Push,Home & Kitchen,115,2,2536.83,1268.41,0,0,0,1,0,0,3,-88.1,0.056,0.533,0.0,253.68,338.5,1,0,1000.0,dormant
+C1485,Siddharth Kumar,siddharth.kumar31@example.com,2024-01-15,Email,Home & Kitchen,20,22,61421.83,2791.9,55,46,12,0,21,12,1,31.5,0.042,0.172,18426.55,42995.28,17.3,0,1,138939.79,loyal
+C1486,Aditya Rao,aditya.rao70@example.com,2024-01-15,Push,Electronics,183,2,1464.56,732.28,2,1,0,1,1,0,4,-42.2,0.113,0.833,0.0,146.46,251.5,1,0,1000.0,dormant
+C1487,Vikram Rao,vikram.rao10@example.com,2024-01-15,WhatsApp,Electronics,18,10,68735.98,6873.6,22,94,24,7,25,18,0,88.9,0.043,0.784,20620.79,48115.19,45.7,0,1,132300.03,high_intent
+C1488,Siddharth Chawla,siddharth.chawla40@example.com,2024-01-15,Phone,Electronics,97,14,133751.83,9553.7,3,7,3,3,0,0,5,-58.0,0.208,0.362,0.0,13375.18,8.2,1,0,33437.96,at_risk
+C1489,Meera Gupta,meera.gupta68@example.com,2024-01-15,Phone,Electronics,17,9,45189.73,5021.08,69,57,20,5,21,16,1,73.3,0.087,0.576,13556.92,31632.81,68.2,0,1,65696.64,high_intent
+C1490,Aarav Verma,aarav.verma59@example.com,2024-01-15,Phone,Electronics,82,21,155582.56,7408.69,5,11,2,2,4,1,7,-65.3,0.112,0.437,0.0,108907.79,17.6,1,0,38370.02,at_risk
+C1491,Ananya Joshi,ananya.joshi96@example.com,2024-01-15,WhatsApp,Electronics,94,19,369152.82,19429.1,8,11,1,4,2,0,7,-47.1,0.169,0.532,0.0,36915.28,21.2,1,0,83794.02,at_risk
+C1492,Riya Verma,riya.verma81@example.com,2024-01-15,Email,Home & Kitchen,8,19,152960.39,8050.55,56,86,11,1,18,9,1,26.9,0.044,0.2,45888.12,107072.27,12.6,0,1,362971.74,loyal
+C1493,Varun Kumar,varun.kumar45@example.com,2024-01-15,WhatsApp,Home & Kitchen,134,2,4521.26,2260.63,1,4,0,1,2,1,3,-58.8,0.164,0.672,0.0,452.13,42.5,1,0,1130.32,dormant
+C1494,Tanvi Singh,tanvi.singh96@example.com,2024-01-15,Email,Beauty & Care,3,17,126466.77,7439.22,40,47,14,0,11,6,1,6.4,0.043,0.236,37940.03,88526.74,5.7,0,1,286195.55,loyal
+C1495,Priya Gupta,priya.gupta73@example.com,2024-01-15,Email,Sports & Fitness,1,30,436510.82,14550.36,41,94,9,3,19,10,1,36.8,0.061,0.233,130953.25,305557.57,6.1,0,1,1033817.23,loyal
+C1496,Aarav Mehta,aarav.mehta34@example.com,2024-01-15,WhatsApp,Fashion,196,3,2283.91,761.3,2,2,1,2,1,1,3,-50.5,0.075,0.777,0.0,228.39,31.3,1,0,1000.0,dormant
+C1497,Karan Joshi,karan.joshi80@example.com,2024-01-15,SMS,Home & Kitchen,117,12,214926.48,17910.54,5,4,3,3,3,1,4,-27.8,0.13,0.485,0.0,21492.65,40.4,1,0,40437.2,at_risk
+C1498,Ananya Gupta,ananya.gupta55@example.com,2024-01-15,SMS,Fashion,169,1,1466.81,1466.81,2,4,1,0,0,0,1,-46.8,0.168,0.525,0.0,146.68,321.0,1,0,1000.0,dormant
+C1499,Sanya Verma,sanya.verma15@example.com,2024-01-15,Phone,Fashion,101,16,103276.68,6454.79,6,4,2,6,0,2,4,-36.9,0.177,0.505,0.0,10327.67,22.1,1,0,25819.17,at_risk
+C1500,Pooja Gupta,pooja.gupta57@example.com,2024-01-15,Phone,Fashion,20,6,31513.88,5252.31,27,43,20,7,14,13,1,80.6,0.098,0.563,9454.16,22059.72,81.5,0,1,55164.32,high_intent

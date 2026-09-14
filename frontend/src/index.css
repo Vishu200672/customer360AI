@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Foundation */
+    --color-brand-primary: #173F35;
+    --color-brand-hover: #0F3028;
+    --color-brand-active: #0B2821;
+    --color-brand-deep: #09231C;
+    --color-brand-soft: #E7EFEB;
+
+    /* Signature AI */
+    --color-ai-accent: #B7C95B;
+    --color-ai-soft: #F1F4DC;
+    --color-ai-border: #D5DE9C;
+    --color-ai-text: #657326;
+
+    /* Champagne Premium */
+    --color-premium-gold: #C49A4A;
+    --color-premium-soft: #F5EBD2;
+
+    /* Background Canvas & Surfaces */
+    --bg-canvas: #F5F3EE;
+    --bg-secondary: #EFEEE8;
+    --bg-tertiary: #E8E6DE;
+    --bg-main: #F5F3EE;
+    --bg-card: #FAF9F6;
+    --bg-sidebar: #FAF9F6;
+    --bg-hover: #EFECE6;
+    --bg-surface-elevated: #FFFFFF;
+
+    /* Typography */
+    --text-primary: #171918;
+    --text-secondary: #686B67;
+    --text-tertiary: #8A8D87;
+    --text-disabled: #A7A9A3;
+    --text-inverse: #F5F3EE;
+    --text-forest: #173F35;
+
+    /* Semantics: Risk */
+    --color-risk-primary: #B8423A;
+    --color-risk-soft: #F9E8E6;
+    --color-risk-border: #E8B8B3;
+    --color-risk-dark: #91342E;
+
+    /* Semantics: Warning */
+    --color-warning-primary: #B78A3D;
+    --color-warning-soft: #F8F0DD;
+    --color-warning-border: #E3C990;
+    --color-warning-dark: #8A6527;
+
+    /* Semantics: Success */
+    --color-success-primary: #287052;
+    --color-success-soft: #E5F1EB;
+    --color-success-border: #B9D6C8;
+    --color-success-dark: #205C43;
+
+    /* Borders */
+    --border-subtle: #E7E5DE;
+    --border-default: #DCDAD3;
+    --border-strong: #C9C7BF;
+    --border-brand: #9EB5AD;
+
+    /* Legacy compatibility mappings */
+    --accent-primary: #173F35;
+  }
+
+  .dark {
+    /* Brand Foundation */
+    --color-brand-primary: #2D6A56;
+    --color-brand-hover: #215343;
+    --color-brand-active: #183F33;
+    --color-brand-deep: #09231C;
+    --color-brand-soft: #152E26;
+
+    /* Signature AI */
+    --color-ai-accent: #B7C95B;
+    --color-ai-soft: #232A16;
+    --color-ai-border: #4A5623;
+    --color-ai-text: #D5DE9C;
+
+    /* Champagne Premium */
+    --color-premium-gold: #C49A4A;
+    --color-premium-soft: #2E2514;
+
+    /* Background Canvas & Surfaces */
+    --bg-canvas: #101814;
+    --bg-secondary: #151E19;
+    --bg-tertiary: #19221E;
+    --bg-main: #101814;
+    --bg-card: #19221E;
+    --bg-sidebar: #151E19;
+    --bg-hover: #202A25;
+    --bg-surface-elevated: #202A25;
+
+    /* Typography */
+    --text-primary: #F5F3EE;
+    --text-secondary: #B9BDB7;
+    --text-tertiary: #858B84;
+    --text-disabled: #555B54;
+    --text-inverse: #171918;
+    --text-forest: #6FA697;
+
+    /* Semantics: Risk */
+    --color-risk-primary: #D0645B;
+    --color-risk-soft: #301715;
+    --color-risk-border: #5A2724;
+    --color-risk-dark: #F9E8E6;
+
+    /* Semantics: Warning */
+    --color-warning-primary: #D0A75D;
+    --color-warning-soft: #302615;
+    --color-warning-border: #5A4824;
+    --color-warning-dark: #F8F0DD;
+
+    /* Semantics: Success */
+    --color-success-primary: #55A47D;
+    --color-success-soft: #152B21;
+    --color-success-border: #254F3D;
+    --color-success-dark: #E5F1EB;
+
+    /* Borders */
+    --border-subtle: #242F29;
+    --border-default: #303A35;
+    --border-strong: #404B45;
+    --border-brand: #3A5F53;
+
+    /* Legacy compatibility mappings */
+    --accent-primary: #2D6A56;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+
+  .font-serif-editorial {
+    font-family: 'DM Serif Display', Georgia, serif;
+  }
+}
+
+/* Custom Background Motion Keyframes */
+@keyframes bgDrift {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    transform: scale(1.06) translate(-20px, 15px);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+.animate-bg-drift {
+  animation: bgDrift 25s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
